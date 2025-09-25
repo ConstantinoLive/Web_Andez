@@ -261,11 +261,121 @@
     height: 100%;
 }
 
+/**************Redes***************/
+
+ul {
+    list-style: none;
+}
+
+.redes {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+}
+
+.redes .icon-content {
+    margin: 0 -20px;
+    position: relative;
+    padding: 0.5rem;
+    top: 30px;
+}
+
+.redes .icon-content .tooltip {
+    position: absolute;
+    top: 100%;
+    left: 110%;
+    transform: translateY(300%);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 9px;
+    transition: all 0.3s ease;
+}
+
+.redes .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.redes .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.redes .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.redes .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+}
+
+.redes .icon-content a:hover {
+    color: white;
+}
+
+.redes .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.redes .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.redes .icon-content a[data-social="linkedin"] .filled,
+.redes .icon-content a[data-social="linkedin"]~.tooltip {
+    background-color: #0274b3;
+}
+
+.redes .icon-content a[data-social="facebook"] .filled,
+.redes .icon-content a[data-social="facebook"]~.tooltip {
+    background-color: #0274b3;
+}
+
+
+.redes .icon-content a[data-social="instagram"] .filled,
+.redes .icon-content a[data-social="instagram"]~.tooltip {
+    background: linear-gradient(45deg,
+            #405de6,
+            #5b51db,
+            #b33ab4,
+            #c135b4,
+            #e1306c,
+            #fd1f1f);
+}
+
+.redes .icon-content a[data-social="youtube"] .filled,
+.redes .icon-content a[data-social="youtube"]~.tooltip {
+    background-color: #ff0000;
+}
+
 /***********Fondo****************/
 .wrapper {
     display: flex;
     flex-direction: column;
-
 }
 
 .bg-img {
@@ -278,14 +388,14 @@
 
 .wrapper .sticky-wrapper {
     width: 100%;
-    height: 100vh;
+    height: 107vh;
     object-fit: cover;
     position: sticky;
     top: 0;
 
     animation: bg ease-in-out both;
     animation-timeline: view();
-    animation-range: entry 110% cover 40%;
+    animation-range: entry 110% cover 40%;   
 }
 
 @keyframes bg {
@@ -300,6 +410,13 @@
 }
 
 /**********Contenido****************/
+
+body {
+    height: 400vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
 .content {
     position: absolute;
     max-width: 730px;
@@ -324,12 +441,10 @@
     transition-delay: 0.1s;
 }
 
-
 .titulo {
     font-size: clamp(3rem, 6vw, 5rem);
     margin-bottom: 1rem;
     font-family: "Montserrat", sans-serif;
-
 
 }
 
@@ -340,7 +455,6 @@
     font-weight: bold;
 
 }
-
 
 /* Ajustes responsive */
 @media (max-width: 768px) {
@@ -377,7 +491,6 @@
 
 /**********Lanzamiento***************/
 
-
 .lanzamiento {
     position: absolute;
     top: 6rem;
@@ -398,7 +511,6 @@
     animation: latido 1.5s ease-in-out;
     animation-iteration-count: 3;
 }
-
 
 @keyframes latido {
     0% {
@@ -480,87 +592,42 @@
 }
 
 /***********Footer****************/
-/*
-.fraseFooter{
-    z-index: 200;
-    position: absolute;
-    top: 40vh;
-    right: 30vh;
-    font-family: "Advent Pro", sans-serif;
-    font-size: 50px;
-    color: #6b6b6b;
-}
 
-.listaFooter{
-    width: 100%;
-    height: 50vh;
-    top:50vh;
-    position:absolute;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 500;
-}
-
-.links_footer {
-    padding-left: 120px;
-    padding-top: 20px;
-}
-
-.title_footer {
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(75, 75, 75);
-}
-
-.parrafo_footer {
-    color: rgb(127, 127, 127);
-    font-size: 12px;
-    margin-right: 20px;
-    padding-bottom: 20px;
-    text-align: right;
-}
-
-.separador_footer {
-    border-right: 1px solid rgb(127, 127, 127);
-}
-
-.links_footer > ul, li {
-    list-style: none;
-}
-
-.link li a {
-    text-decoration: none;
-    color: rgb(127, 127, 127);
-}
-
-hr{
-    size: 1px solid rgb(127, 127, 127);
-}*/
-
-/* Frase grande arriba del footer */
+/* Frase arriba del footer */
 .fraseFooter {
     z-index: 200;
     position: absolute;
-    top: 35vh;
+    top: 30vh;
     left: 10%;
     font-family: "Advent Pro", sans-serif;
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 600;
     /*color: #444;*/
     color: #c0c0c0;
-  text-shadow: 1px 1px 3px #999999, 
-               -3px -1px 3px #ffffff;
+    text-shadow: 1px 1px 3px #999999,
+        -3px -1px 3px #ffffff;
     text-align: left;
     line-height: 1.2;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease-out;
+
 }
+
+.fraseFooter.visible {
+    opacity: 0.9;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
 
 /* Contenedor del footer */
 .listaFooter {
     width: 100%;
     min-height: 45vh;
     position: absolute;
-    top: 55vh;
+    top: 51vh;
     background: rgba(255, 255, 255, 0.278);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -569,6 +636,16 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease-out;
+}
+
+.listaFooter.visible {
+    opacity: 0.9;
+    transform: translateY(0);
+    transition-delay: 0.1s;
 }
 
 /* Grid de links */
@@ -610,7 +687,7 @@ hr{
     color: #ffffff;
 }
 
-/* Separador opcional (solo en desktop) */
+/* Separadores */
 .separador_footer {
     border-right: 2px solid rgba(75, 75, 75, 0.69);
     padding-right: 1rem;
@@ -675,115 +752,4 @@ hr{
     .link li a {
         font-size: 1rem;
     }
-}
-
-/**************Redes***************/
-
-ul {
-    list-style: none;
-}
-
-.example-2 {
-    display: flex;
-    justify-content:end;
-    align-items:start;
-    flex-direction: column;
-}
-
-.example-2 .icon-content {
-    margin: 0 -20px;
-    position: relative;
-    padding: 0.5rem;
-    top: 30px;
-}
-
-.example-2 .icon-content .tooltip {
-    position: absolute;
-    top: 100%;
-    left: 110%;
-    transform: translateY(300%);
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 9px;
-    transition: all 0.3s ease;
-}
-
-.example-2 .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: -50px;
-}
-
-.example-2 .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.example-2 .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-}
-
-.example-2 .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 15px;
-    height: 15px;
-}
-
-.example-2 .icon-content a:hover {
-    color: white;
-}
-
-.example-2 .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-}
-
-.example-2 .icon-content a:hover .filled {
-    height: 100%;
-}
-
-.example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
-    background-color: #0274b3;
-}
-
-.example-2 .icon-content a[data-social="facebook"] .filled,
-.example-2 .icon-content a[data-social="facebook"]~.tooltip {
-    background-color: #0274b3;
-}
-
-
-.example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"]~.tooltip {
-    background: linear-gradient(45deg,
-            #405de6,
-            #5b51db,
-            #b33ab4,
-            #c135b4,
-            #e1306c,
-            #fd1f1f);
-}
-
-.example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"]~.tooltip {
-    background-color: #ff0000;
 }

@@ -18,4 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll(".content").forEach((el) => {
         observer.observe(el);
     });
+    document.querySelectorAll(".fraseFooter").forEach((el) => {
+        observer.observe(el);
+    });
+    document.querySelectorAll(".listaFooter").forEach((el) => {
+        observer.observe(el);
+    });
 });
