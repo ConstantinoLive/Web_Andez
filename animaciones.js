@@ -89,3 +89,53 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
+
+
+//Carrusel
+const wheel = document.querySelector(".carrusel-wheel");
+const items = document.querySelectorAll(".carrusel-item");
+const sections = document.querySelectorAll(".producto-seccion");
+
+let current = 0;
+
+function updateCarousel() {
+    // --- Actualizar carrusel ---
+    items.forEach((item, i) => {
+        item.classList.remove("active", "prev", "next", "behind");
+
+        if (i === current) {
+            item.classList.add("active");
+        } else if (i === (current - 1 + items.length) % items.length) {
+            item.classList.add("prev");
+        } else if (i === (current + 1) % items.length) {
+            item.classList.add("next");
+        } else {
+            item.classList.add("behind");
+        }
+    });
+
+    // --- Mostrar solo la sección correspondiente ---
+    sections.forEach((sec, i) => {
+        sec.style.display = i === current ? "block" : "none";
+    });
+    /*sections.forEach((sec, i) => {
+        if (i === current) {
+            sec.classList.add("visible");
+        } else {
+            sec.classList.remove("visible");
+        }
+    });*/
+}
+
+// Inicializar
+updateCarousel();
+
+// --- Detectar scroll ---
+window.addEventListener("wheel", (e) => {
+    if (e.deltaY > 0) {
+        current = (current + 1) % items.length;
+    } else {
+        current = (current - 1 + items.length) % items.length;
+    }
+    updateCarousel();
+});
