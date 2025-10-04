@@ -609,8 +609,8 @@ ul {
 
 .dimensionales{
     position: absolute;
-    right: 550px;
-    top: 100px;
+    right: 530px;
+    top: 70px;
     width: 250px;
     max-height: 500px;
     object-fit: contain;
