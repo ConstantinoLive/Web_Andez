@@ -377,7 +377,7 @@ ul {
 
 .producto-seccion {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     object-fit: cover;
     position: fixed;
     top: 0;
@@ -389,42 +389,50 @@ ul {
 
 /***********Titulo***********/
 
+
 .titulo {
     display: flex;
     flex-direction: column;
+    
 }
 
 .lna {
     font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-size: 70px;
+    /*font-size: 80px;*/
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     color: #404040;
     position: absolute;
-    top: 115px;
-    left: 850px;
+    top: 80px;
+    left: 650px;
     z-index: 10;
 }
 
 .NombreLinea {
     font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-size: 100px;
+    /*font-size: 110px;*/
+    font-size: clamp(6.5rem, 8vw, 8.5rem);
     color: #404040;
     position: absolute;
-    top: 150px;
-    left: 850px;
+    top: 110px;
+    left: 644px;
     z-index: 20;
 }
 
 .descripcion {
     position: absolute;
-    width: 600px;
-    top: 300px;
-    left: 850px;
+    width: 620px;
+    top: 240px;
+    left: 650px;
+
 }
 
 .desc {
     font-family: "Advent Pro", sans-serif;
-    font-size: 30px;
-    color: #424040;
+    /*font-size: 30px;*/
+    font-size: clamp(2rem, 3vw, 3rem);
+    /*color: #424040;*/
+    color: #bab9b9;
+    text-shadow:2px 2px 6px #ffffff;
 }
 
 /* ======= SECCIÓN DE PRODUCTO ======= */
@@ -436,29 +444,38 @@ ul {
     flex-direction: column;
     /*box-sizing: border-box;*/
     gap: 20px;
+
 }
 
 #producto .box_1 {
-    position: relative;
+    position: absolute;
     width: 45vw;
-    height: 350px; 
+    height: 350px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    top: 20px;
+    top: 60px;
+    /*20px*/
+
+    left: 10px;
+    bottom: 300px;
 }
 
 #producto .box_1 img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; 
-    transition: opacity 0.4s ease-in-out;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    transition: opacity 1.4s ease-in-out;
+    opacity: 1;
+    padding-left: 100px;
 }
 
 #big_title {
-    text-align: center;
-    margin-top: 10px;
+    position: relative;
+    text-align: left;
+    margin-top: 280px;
+    
 }
 
 #big_title h3 {
@@ -473,23 +490,34 @@ ul {
 
 #producto .box_2 {
     position: absolute;
-    display:inline-flex;
-    justify-content:center;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 5vh;
+    top: 70vh;
+    left: 5px;
+
 }
 
 #producto .box_2 img {
     width: 7vw;
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.3s ease, opacity 1.4s ease-in-out;
+    opacity: 1;
 }
 
 #producto .box_2 img:hover {
     transform: scale(1.2);
+}
+
+#producto .box_2 .resenia p{
+    opacity: 0;
+}
+
+#producto .box_2 .manuales a{
+    opacity: 0;
 }
 
 .container {
@@ -501,5 +529,337 @@ ul {
 
 .title h3 {
     font-size: 3vw;
+    text-align: left;
+}
+
+/*******Botones de descarga*******/
+
+.manuales {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    gap: 15vw;
+    top: 60vh;
+    left: 55vw;
+    /*width: 50vw;*/
+}
+
+
+.manuales a {
+    /*display: flex;*/
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: "Montserrat", sans-serif;
+    /*font-size: 16px;*/
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(34, 34, 34, 0.475);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease, background 0.3s ease, opacity 1.4s ease-in-out;
+    /*transform: translateY(40px);*/
+    /*transition: opacity 1.4s ease-in-out;*/
+    opacity: 1;
+
+    order: 6;
+}
+
+.manuales a:hover {
+    background: rgba(87, 87, 87, 0.25);
+    transform: translateY(-3px);
+}
+
+.manuales img {
+    width: 5vh;
+    height: 5vh;
+}
+
+
+@keyframes slideBTNIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.58);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes slideBTNOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.58);
+    }
+}
+
+/***********Descripción*************/
+
+
+.resenia {
+    z-index: 10;
+    position: absolute;
+    padding: 2rem;
+    width: 45vw;
+    height: 170px;
+    top: 40vh;
+    left: 65vh;
+    text-align: justify;
+    
+}
+
+.resenia p {
+    font-size: clamp(1.1rem, 1vw, 1.5rem);
+
+}
+
+
+/*************Atributos************/
+
+.atributos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 260px;
+    padding: 30px 10px;
+    background: rgba(40, 40, 40, 0.055);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+
+}
+
+.atbts {
+    margin-top: 50px;
     text-align: center;
+    color: rgb(134, 134, 134);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+.atributos ul {
+    margin-top: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.atributos li {
+    color: #fff;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default;
+    transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+/* Hover sutil */
+.atributos li:hover {
+    color: #98dad9;
+    transform: translateX(6px);
+    text-shadow: 0px 0px 8px rgba(152, 218, 217, 0.7);
+}
+
+/***********Responsivo*************/
+/*@media (max-width: 1020px) {*/
+@media (max-width: 1350px) {
+    .producto-seccion {
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        /*height: auto;*/
+        min-height: 2050px;
+        
+        background: linear-gradient(45deg, #3e413e, #f7f2ef, #ded8c8, #aca89c);
+        background-size: cover;
+        background-attachment:fixed;
+        padding: 5vh 5vw;
+        box-sizing: border-box;
+        
+    }
+
+    /************** Títulos **************/
+    .titulo {
+        text-align: center;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .lna {
+        position: relative;
+        top: 70px;
+        left: auto;
+    }
+
+    .NombreLinea {
+        position: relative;
+        top: 50px;
+        left: auto;
+    }
+
+    .descripcion {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: 50px;
+        left: auto;
+        margin: 1rem 0;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    /************** Imagen principal **************/
+    #producto {
+        width: 100%;
+        /*height: 80vw;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #producto .box_1 {
+        position: absolute;
+        width: 100%;
+        height: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+        /*margin-bottom: -200px;*/
+        overflow: hidden;
+        left: 0;
+        top: 70vw;
+        
+    }
+
+    #producto .box_1 img {
+        width: 100%;
+        height: 350px;
+        max-width: 500px;
+        
+    }
+
+    #big_title {
+        position: absolute;
+        text-align: left;
+        /*margin: 1rem 0;*/
+        top: 80vw;
+        left: 15vw;
+        
+    }
+
+    #big_title h3 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    #big_title p {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    /************** Miniaturas **************/
+    #producto .box_2 {
+        position: absolute;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5vh;
+        top: 205vw;
+        left: 5px;
+        
+    }
+    
+    #producto .box_2 img {
+        width: 10vw;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 1.4s ease-in-out;
+        opacity: 1;
+        
+    }
+
+    /************** Reseña **************/
+    .resenia {
+        position: absolute;
+        width: 80vw;
+        height: auto;
+        top: 150vw;
+        left: 10vw;
+        margin-top: 1rem;
+        color: #333;
+        text-align: justify;
+        padding: 0 1rem;
+    }
+/*
+    .resenia p {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+*/
+    /************** Manuales **************/
+   .manuales {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 2rem 0;
+        top: 180vw;
+        left: auto;
+    }
+    
+    #producto .manuales img {
+    width: 40px;
+    height: 40px;
+    }
+
+    .manuales a{
+        padding: 5px 16px;
+        cursor:auto;
+    }
+    
+    /************** Atributos **************/
+    .atributos {
+        position: absolute;
+        width: 80%;
+        height: auto;
+        margin: 2rem 0;
+        padding: 20px;
+        border-radius: 15px;
+        background: rgba(40, 40, 40, 0.15);
+        backdrop-filter: blur(8px);
+        top: 260vw;
+        left: 10vw;
+    }
+
+    .atbts {
+        font-size: clamp(1rem, 4vw, 1.4rem);
+    }
+
+    .atributos li {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+
+    #o1{order: 1;}
+    #o2{order: 2;}
+    #o3{order: 3;}
+    #o4{order: 4;}
 }

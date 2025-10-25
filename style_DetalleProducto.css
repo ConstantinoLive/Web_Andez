@@ -375,18 +375,30 @@ ul {
 
 /**************Fondo***************/
 
-.producto-seccion {
+.producto-seccion_T {
     width: 100%;
     height: 100vh;
     object-fit: cover;
     position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: -1;
     background: linear-gradient(45deg, #2e424d,
             #5b8291, #98dad9, #eaebed);
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2vh 4vw;
+    box-sizing: border-box;
 }
 
+.producto-seccion{
+    display: flex;
+}
 
 /*************Atributos************/
 
@@ -402,6 +414,7 @@ ul {
     border-radius: 20px;
     animation: slideOut 1.2s ease forwards;
     opacity: 1;
+    
 }
 
 @keyframes slideIn {
@@ -409,11 +422,12 @@ ul {
         transform: translateX(-80px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
-    
+
 }
 
 @keyframes slideOut {
@@ -421,10 +435,12 @@ ul {
         transform: translateX(0px);
         opacity: 1;
     }
+
     50% {
         transform: translateX(-80);
         opacity: 0.5;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -450,8 +466,7 @@ ul {
 .atributos li {
     color: #fff;
     padding: 12px 0;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     cursor: default;
     transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
     transform: translateX(-80px);
@@ -470,12 +485,13 @@ ul {
 /**********Carrusel**********/
 .carrusel-container {
     position: fixed;
-    right: 300px;
+    right: 330px;
     top: 60%;
     transform: translateY(-50%);
     perspective: 1300px;
     z-index: 50;
     overflow: visible;
+    
 }
 
 .carrusel-wheel {
@@ -491,13 +507,13 @@ ul {
     top: 50%;
     left: 50%;
     transform-style: preserve-3d;
-    opacity:0; /*0.4;*/
+    opacity: 0;
     transition: transform 0.8s, opacity 0.6s;
     text-align: center;
 }
 
 .carrusel-item img {
-    width: 260px;
+    width: clamp(160px, 18vw, 380px);
     border-radius: 20px;
     transition: transform 0.6s ease, filter 0.6s ease;
     filter: drop-shadow(0px 25px 35px rgba(0, 0, 0, 0.4));
@@ -530,7 +546,7 @@ ul {
 
 /* Activo */
 .carrusel-item.active {
-    transform: translate(-70%, -70%) translateZ(400px) scale(1.25);
+    transform: translate(-70%, -70%) translateZ(400px) scale(1.65);
     opacity: 1;
     z-index: 10;
 }
@@ -563,76 +579,73 @@ ul {
 .titulo {
     display: flex;
     flex-direction: column;
+    
 }
 
 .lna {
     font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-size: 70px;
+    font-size: clamp(5rem, 6vw, 7rem);
     color: #d4d3d3;
-    top: 115px;
-    left: 350px;
+    top: 14vh;
+    left: 38.5vh;
     position: absolute;
     z-index: 10;
 }
 
 .NombreLinea {
     font-family: "Alumni Sans Pinstripe", sans-serif;
-    font-size: 100px;
+    font-size: clamp(8rem, 8vw, 10.3rem);
     color: #d4d3d3;
-    top: 150px;
-    left: 350px;
+    top: 20vh;
+    left: 38vh;
     position: absolute;
     z-index: 20;
 }
 
 .descripcion {
-    display: block;
     position: absolute;
-    width: 600px;
-    height: 200px;
-    top: 300px;
-    left: 350px;
+    text-align: center;
+    align-content: center;
+    max-width: 600px;
+    max-height: 160px;
+    top: 42vh;
+    left: 39vh;
+    
 }
 
 .desc {
     font-family: "Advent Pro", sans-serif;
-    font-size: 30px;
+    font-size: clamp(2rem, 2.5vw, 3rem);
     color: #ffffff;
 }
 
-.producto {
-    z-index: 10;
-    position: relative;
-    display: flex;
-    color: #2e424d;
-}
-
-.dimensionales{
+.dimensionales {
     position: absolute;
-    right: 530px;
-    top: 70px;
-    width: 250px;
-    max-height: 500px;
+    right: 70vh;
+    top: 7vh;
+    max-width: 40vh;
     object-fit: contain;
-    filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.4));
-    transform: translateY(20px); /* efecto de subida */
+    filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.4));
+    transform: translateY(20px);
+    /* efecto de subida */
     transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.resenia{
-    z-index: 100;
-    position: relative;
-    display: flex;
-    top: 430px;
-    left: 350px;
-    width: 500px;
-    height: 100px;
     
 }
 
-.resenia p{
-    text-align: justify;
+.resenia {
+    z-index: 100;
+    position: absolute;
+    display: block;
+    top: 55vh;
+    left: 40vh;
+    max-width: 500px;
+    max-height: 150px;
+    
+}
 
+.resenia p {
+    text-align: justify;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
 }
 
 /*******Botones de descarga*******/
@@ -642,10 +655,11 @@ ul {
     position: absolute;
     display: flex;
     gap: 20px;
-    top: 550px;
-    left: 350px;
+    top: 73vh;
+    left: 40vh;
     animation: slideBTNOut 1.5s ease forwards;
     opacity: 1;
+    
 }
 
 
@@ -656,8 +670,7 @@ ul {
     padding: 12px 20px;
     border-radius: 50px;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     color: #fff;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.15);
@@ -665,7 +678,6 @@ ul {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.2s ease, background 0.3s ease;
-    /*transform: translateY(40px);*/
     opacity: 0;
     animation: slideBTNIn 1.5s ease forwards;
 }
@@ -682,93 +694,156 @@ ul {
 
 @keyframes slideBTNIn {
     0% {
-        /*transform: translateY(40px);*/
         opacity: 0;
     }
+
     100% {
-        /*transform: translateY(0);*/
         opacity: 1;
     }
-    
+
 }
 
 @keyframes slideBTNOut {
     0% {
-        /*transform: translateY(0px);*/
         opacity: 1;
     }
+
     50% {
-        /*transform: translateY(40);*/
         opacity: 0.5;
     }
+
     100% {
-        /*transform: translateY(0px);*/
         opacity: 1;
     }
 }
 
-/* ====== Dispositivos medianos (tablets horizontales) ====== */
-@media (max-width: 1200px) {
-    .carrusel-container {
-        right: 150px;
-        transform: scale(0.85);
-    }
-
-    .dimensionales {
-        right: 300px;
-        width: 200px;
-    }
-
-    .descripcion {
-        width: 450px;
-    }
-}
-
-/* ====== Tablets verticales ====== */
-@media (max-width: 768px) {
-    .carrusel-container {
+/*********Responsive**********/
+/* Tablet: a partir de 1024px para abajo */
+/*@media (max-width: 1024px) {*/
+@media (max-width: 1400px) {
+    .producto-seccion_T {
         position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 30px auto;
-    }
-
-    .producto-seccion {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        overflow-y: auto;
+        height: auto;
+        background: linear-gradient(45deg, #2e424d,
+            #5b8291, #98dad9, #c9c9c9);
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 5vh 5vw;
+        box-sizing: border-box;
     }
 
     .atributos {
-        position: relative;
+        position:relative;
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
+        overflow-y: auto;
     }
 
-    .dimensionales {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 200px;
-        margin: 20px auto;
+    .atbts{
+        color: #0274b3;
     }
 
-    .descripcion, .resenia {
+    .titulo{
         position: relative;
-        top: auto;
+        padding-top: 10px;
+        top: 20px;
+        bottom: 300px;
+        width: 100%;
+    }
+
+    .lna,
+    .NombreLinea{
+        color: #ffffff;
+        text-align:center;
+        position: relative;
         left: auto;
-        width: 90%;
-        margin: 10px auto;
     }
 
+    .lna{
+        top: 2vh;
+    }
+
+    .NombreLinea{
+        top: -5.5vh;
+    }
+    
+    .info h3{
+        color: #d1d1d1;
+    }
+
+    .descripcion{
+        position: relative;
+        left:0;
+        top: -20px;
+        display: flex;
+        max-width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        
+    }
+    
+    .desc,
+    .dimensionales,
+    .resenia,
     .manuales {
         position: relative;
         top: auto;
         left: auto;
-        margin-top: 20px;
+        right: auto;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .dimensionales {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+
+    .resenia {
+        color: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .manuales {
         justify-content: center;
     }
+
+    .carrusel-container {
+        position: relative;
+        right: auto;
+        top: 100px;
+        transform: none;
+        margin-top: 15rem;
+        margin-bottom: 25rem;
+    }
+
+    /************Orden****************/
+#o1{order: 1;}
+#o2{order: 2;}
+#o3{order: 3;}
+#o4{order: 4;}
+#o5{order: 5;}
+#o6{order: 6;}
+#o7{order: 7;}
+#o8{order: 8;}
+
+.producto-seccion {
+    display: flex;
+    flex-direction: column;
+    } 
 }
+
+

@@ -114,17 +114,10 @@ function updateCarousel() {
         }
     });
 
-    // --- Mostrar solo la sección correspondiente ---
+    // --- Muestra solo la sección correspondiente ---
     sections.forEach((sec, i) => {
         sec.style.display = i === current ? "block" : "none";
     });
-    /*sections.forEach((sec, i) => {
-        if (i === current) {
-            sec.classList.add("visible");
-        } else {
-            sec.classList.remove("visible");
-        }
-    });*/
 }
 
 // Inicializar
