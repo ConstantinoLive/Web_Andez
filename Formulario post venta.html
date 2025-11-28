@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descubrí tu estilo</title>
+    <title>Formulario postventa</title>
 
-    <link rel="stylesheet" href="style_Estilos.css">
-
+    <link rel="stylesheet" href="style_FormularioPostventa.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 </head>
 
@@ -73,7 +73,7 @@
                             <li class="item_lista dropdown-submenu">
                                 <a href="#"><img src="./icon/postventa.png"> Post Venta</a>
                                 <ul class="submenu animate__animated animate__zoomIn">
-                                    <li><a href="#">Atención al cliente</a></li>
+                                    <li><a href="./Formulario post venta.html">Atención al cliente</a></li>
                                     <li><a href="https://andezrepuestos.mitiendanube.com/">Tienda de repuestos</a></li>
                                 </ul>
                             </li>
@@ -158,160 +158,179 @@
             </div>
         </div>
     </header>
+    <section class="row seccion">
+        <div class="col-4">
+            <div class="card">
+                <img class="card-image" src="./img/Copia de Garantía 10 años blanco.png" alt="Garantía">
 
-    <div class="seccion">
+                <div class="card-info">
+                    <span class="name">Garantía</span>
+                    <p class="role">Todos nuestros productos cuentan con 10 años de garantía</p>
+                </div>
 
-        <section class="grupo">
-            <h3 class="nombreLinea">Línea Antique cruz</h3>
-            <div class="listaCards">
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Ambientación.png"><span
-                        class="codigo">500.40</span></div>
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Lavatorio-3-Agujeros.png"><span
-                        class="codigo">500.40</span></div>
-                <div class="card"><img src="./img/Ambientaciones/Antique Cruz BV/Copia-de-ANTIQUE-BIDET-01-B.png"><span
-                        class="codigo">700.40</span></div>
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Bañera02.png"><span
-                        class="codigo">604.40</span></div>
-                        <div class="card"><img
-                            src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Ambientación.png"><span
-                            class="codigo">500.40</span></div>
-                <div class="cardT"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt
-                ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-                Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur
-                sint
-                occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+                <a href="#" class="card-btn">Descargar</a>
             </div>
-        </section>
 
-        <section class="grupo">
-            <h3 class="nombreLinea">Línea Antique cruz</h3>
-            <div class="listaCards">
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Ambientación.png"><span
-                        class="codigo">500.40</span></div>
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Lavatorio-3-Agujeros.png"><span
-                        class="codigo">500.40</span></div>
-                <div class="card"><img src="./img/Ambientaciones/Antique Cruz BV/Copia-de-ANTIQUE-BIDET-01-B.png"><span
-                        class="codigo">700.40</span></div>
-                <div class="card"><img
-                        src="./img/Ambientaciones/Antique Cruz BV/ANTIQUE-CRUZ-BRONCE-VIEJO-Bañera02.png"><span
-                        class="codigo">604.40</span></div>
-                <div class="cardT"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt
-                ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-                Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur
-                sint
-                occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+        </div>
+        <form class="col-6 formPV">
+            <div class="cardFront">
+                <h2>Datos personales</h2>
+                <div class="inputBox">
+                    <input type="text" name="nombre" placeholder=" ">
+                    <label>Nombre y apellido</label>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="mail" placeholder=" ">
+                    <label>Email</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="telefono" placeholder=" ">
+                    <label>Teléfono</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="localidad" placeholder=" ">
+                    <label>Localidad</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="provincia" placeholder=" ">
+                    <label>Provincia</label>
+                </div>
+
+                
+                <div class="row">
+                    <div class="col-6">
+                        <img class="pv" src="./img/postventa.png" alt="Postventa">
+                    </div>
+                    <div class="col-6">
+                        <p class="nota1">Contactate con nosotros si necesitas asistencia técnica, si queres conocer las caracteristicas técnica
+                            de nuestros productos, comprar repuestos o tu producto presenta alguna falla. 
+                        </p>
+                    </div>
+                </div>
+                
+
             </div>
-        </section>
 
-    </div>
 
-    <!-- GSAP y ScrollTrigger -->
+            <div class="cardBack">
+                <h2>Información del producto</h2>
+                <div class="inputBox">
+                    <input type="text" name="local" placeholder=" ">
+                    <label>Local donde realizó la compra</label>
+                </div>
+                <div class="inputBox">
+                    <input type="date" name="fecha" placeholder=" ">
+                    <label>Fecha de compra</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="modelo" placeholder=" ">
+                    <label>Modelo</label>
+                </div>
+                <div class="inputBox">
+                    <textarea name="consulta" placeholder=" "></textarea>
+                    <label>Consulta, reclamo o comentario</label>
+                </div>
+
+                <div class="archivos-row">
+                    <!--Archivo-->
+                    <div class="file-upload-wrapper  col-6">
+                        <label class="file-upload-label" for="file">
+                            <div class="file-upload-design">
+                                <svg height="1em" viewBox="0 0 640 512">
+                                    <path
+                                        d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z">
+                                    </path>
+                                </svg>
+                                <p>Adjunte un archivo</p>
+                                <span class="browse-button">Buscar</span>
+                            </div>
+                            <input type="file" id="file" multiple accept="image/png, image/jpeg, .pdf"/>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <p class="nota2">Tenga en cuenta que, cuanto más información nos brinde, más ágiles serán los tiempos de resolución.
+                            Puede adjuntar imágenes del producto y de la falla como soporte. Se aceptan archivos en formato <b>PNG</b>, <b>JPG</b> y <b>PDF</b>.
+                            Para validar la garantía, es indispensable adjuntar la factura de compra.
+                        </p>
+                    </div>
+
+                    </div>
+
+                <button class="cta">
+                    <span class="hover-underline-animation"> Enviar </span>
+                    <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                        viewBox="0 0 46 16">
+                        <path id="Path_10" data-name="Path 10"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                            transform="translate(30)"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        document.querySelectorAll(".grupo").forEach((grupo, grupoIndex) => {
-            const cards = grupo.querySelectorAll(".card");
-            const cardT = grupo.querySelector(".cardT");
-            const listaCards = grupo.querySelector(".listaCards");
-
-            // Calcular el ancho total necesario para el contenedor
-            const cardWidth = 600; // mismo que en CSS
-            const overlapPercentage = 0.15; // 75% de superposición
-            const overlap = cardWidth * overlapPercentage;
-
-            // Ajustar el ancho del contenedor para todas las cartas
-            /*const totalWidth = cardWidth + (cards.length * (cardWidth - overlap));
-            listaCards.style.width = `${totalWidth}px`;*/
-            const totalWidth = cardWidth + (cards.length * (cardWidth - overlap)) + cardWidth;
-            listaCards.style.width = `${totalWidth}px`;
-
-            // Posicionar dinámicamente la cardT después de la última card
-            const lastCardPosition = (cards.length - 1) * (cardWidth - overlap) + cardWidth;
-            cardT.style.left = `${lastCardPosition}px`;
-
-            // Timeline para el grupo actual
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: grupo,
-                    start: "top",
-                    end: "bottom",
-                    scrub: 1,
-                    pin: true,
-                    anticipatePin: 1,
-                    markers: false // Cambiar a true para debug
-                }
-            });
-
-            // Animación para cada carta
-            cards.forEach((card, index) => {
-                const xPosition = -index * (cardWidth - overlap);
-
-                tl.to(card, {
-                    x: xPosition,
-                    duration: 1,
-                    ease: "power2.out"
-                }, index * 0.2); // Retraso escalonado
-
-                const codigo = card.querySelector(".codigo");
-                tl.to(codigo, {
-                    rotation: -90,
-                    x: 50,
-                    y: -60,
-                    ease: "power2.out",
-                }, index * .5);
-
-                /*const xPositionT = -index * (cardWidth + overlap);
-                tl.to(cardT, {
-                    x: xPosition,
-                    duration: 1,
-                    ease: "power2.out"
-                }, index * 0.3);*/
-                tl.to(cardT, {
-                    x: -lastCardPosition + overlap * 11,
-                    duration: 1,
-                    ease: "power2.out"
-                  }, cards.length * 0.3);
-            });
-
-            // Efecto de opacidad para crear sensación de profundidad
-            cards.forEach((card, index) => {
-                tl.to(card, {
-                    duration: 0.5
-                }, index * 0.2);
-            });
-        });
-
-        // Efecto adicional: parallax suave para el fondo
-        gsap.to(".seccion", {
-            backgroundPosition: "50% 100%",
-            ease: "power2.out",
+        const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".seccion",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 1
+                start: "top",
+                end: "+=100",
+                scrub: 1,
+                pin: true,
             }
         });
+
+        // 1) CARD FRONT SE VA HACIA LA IZQUIERDA Y SE DESENFOCA
+        tl.to(".cardFront", {
+            x: -150,
+            scale: 0.9,
+            opacity: 0.4,
+            filter: "blur(10px)",
+            zIndex: 1,
+            duration: 1.2,
+            ease: "power4.inOut"
+        });
+
+        // 2) CARD BACK APARECE DESDE ATRÁS Y PASA AL FRENTE
+        tl.fromTo(".cardBack", {
+            x: 400,
+            scale: 0.9,
+            opacity: 0,
+            filter: "blur(12px)",
+            zIndex: 1
+        }, {
+            x: 0,
+            scale: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            zIndex: 5,
+            duration: 1.2,
+            ease: "power4.out"
+        }, "<0.2");
+
+        // 3) CARD FRONT SE VA COMPLETAMENTE
+        tl.to(".cardFront", {
+            x: -400,
+            opacity: 0,
+            filter: "blur(14px)",
+            duration: 1.2,
+            ease: "power4.inOut"
+        });
+
+        // 4) CARD BACK SE ASIENTA EN SU POSICIÓN FINAL
+        tl.to(".cardBack", {
+            scale: 1,
+            duration: 1.2,
+            ease: "power4.out"
+        });
+
     </script>
 
 </body>

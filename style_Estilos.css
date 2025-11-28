@@ -447,29 +447,36 @@ body {
 }
 
 .codigo {
-    /*position: absolute;
-    font-family: "Poiret One", sans-serif;
-    font-size: 3vw;
-    top: 550px;
-    color: #000;*/
-
-
-    /*rotate: -90deg;
-    top:460px;
-    left:-60px;*/
-
     position: absolute;
     font-family: "Poiret One", sans-serif;
     font-size: 3vw;
     bottom: 5px;
     left: 25px;
     color: #000;
-    transition: transform 0.4s ease, left 0.4s ease, bottom 0.4s ease;
+    transition: transform 0.2s ease, left 0.2s ease, bottom 0.2s ease;
     transform-origin: bottom left;
-
 }
 
-/* Efecto de superposición */
+.cardT {
+    position:absolute;
+    padding: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 600px;
+    transition: transform 0.2s ease, left 0.2s ease, bottom 0.2s ease;
+    transform-origin: bottom left;
+    
+    /*background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);*/
+}
+
 .card::before {
     content: '';
     position: absolute;
