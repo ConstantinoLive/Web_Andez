@@ -132,3 +132,7 @@ window.addEventListener("wheel", (e) => {
     }
     updateCarousel();
 });
+
+
+/* ===== Carga de imagenes multiples ===== */
+
