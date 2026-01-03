@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros distribuidores</title>
+
+    <link rel="stylesheet" href="style_Distribuidores.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nvg">
+            <div class="row navegador">
+                <div class="col-1">
+                    <!-- Botón hamburguesa -->
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#Menu" aria-expanded="false">
+                        <span class="toggler-icon top-bar"></span>
+                        <span class="toggler-icon middle-bar"></span>
+                        <span class="toggler-icon bottom-bar"></span>
+                    </button>
+                    <!-- Menú lateral -->
+                    <div class="fon_nav_index collapse" id="Menu">
+                        <ul class="menu_index animate__animated animate__zoomIn">
+                            <!-- Productos -->
+                            <li class="item_lista dropdown-submenu">
+                                <a href="#"><img src="./icon/faucet.png"> Productos</a>
+                                <ul class="submenu animate__animated animate__zoomIn">
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Grifería para baños</a>
+                                        <ul class="submenu animate__animated animate__zoomIn">
+                                            <li><a href="./Bimando.html">Bimando</a></li>
+                                            <li><a href="#">Monocomando</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./Detalle de accesorio.html">Accesorios</a></li>
+                                    <li><a href="#">Grifería para cocinas</a></li>
+                                </ul>
+                            </li>
+                            <!-- Tu espacio -->
+                            <li class="item_lista dropdown-submenu">
+                                <a href="#"><img src="./icon/bañera.png"> Tus espacios</a>
+                                <ul class="submenu animate__animated animate__zoomIn">
+                                    <li><a href="#">Catálogos</a></li>
+                                    <li><a href="./Estilos.html">Estilos</a></li>
+                                </ul>
+                            </li>
+                            <!-- Capacitaciones -->
+                            <li class="item_lista">
+                                <a href="#"><img src="./icon/capacitación.png"> Capacitaciones</a>
+                            </li>
+                            <!-- Distribuidores -->
+                            <li class="item_lista">
+                                <a href="./Distribuidores.html"><img src="./icon/tienda.png"> Distribuidores</a>
+                            </li>
+                            <!-- Empresa -->
+                            <li class="item_lista dropdown-submenu">
+                                <a href="#"><img src="./icon/empresa.png"> Empresa</a>
+                                <ul class="submenu animate__animated animate__zoomIn">
+                                    <li><a href="#">Sobre nosotros</a></li>
+                                    <li><a href="#">Misión</a></li>
+                                    <li><a href="#">Visión</a></li>
+                                </ul>
+                            </li>
+                            <!-- Post venta -->
+                            <li class="item_lista dropdown-submenu">
+                                <a href="#"><img src="./icon/postventa.png"> Post Venta</a>
+                                <ul class="submenu animate__animated animate__zoomIn">
+                                    <li><a href="./Formulario post venta.html">Atención al cliente</a></li>
+                                    <li><a href="https://andezrepuestos.mitiendanube.com/">Tienda de repuestos</a></li>
+                                </ul>
+                            </li>
+                            <!-- Contacto -->
+                            <li class="item_lista">
+                                <a href="#"><img src="./icon/correo.png"> Contacto</a>
+                            </li>
+                        </ul>
+                        <!-- Redes -->
+                        <ul class="redes">
+                            <li class="icon-content animate__animated animate__zoomIn">
+                                <a href="https://www.instagram.com/" aria-label="Instagram" data-social="instagram">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">Instagram</div>
+                            </li>
+                            <li class="icon-content animate__animated animate__zoomIn">
+                                <a href="https://linkedin.com/" aria-label="LinkedIn" data-social="linkedin">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">LinkedIn</div>
+                            </li>
+                            <li class="icon-content animate__animated animate__zoomIn">
+                                <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-youtube" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path
+                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </a>
+                                <div class="tooltip">Youtube</div>
+                            </li>
+                            <li class="icon-content animate__animated animate__zoomIn">
+                                <a href="https://facebook.com/" aria-label="Facebook" data-social="facebook">
+                                    <div class="filled"></div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16" xml:space="preserve">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.925 
+                                            7.347 6.75 7.951v-5.625H4.897V8.05H6.75V6.275c0-1.852 1.093-2.875 
+                                            2.77-2.875.802 0 1.637.144 1.637.144v1.8h-.922c-.907 0-1.188.564-1.188 
+                                            1.144V8.05h2.02l-.323 2.326H9.047v5.625C12.872 15.396 16 12.066 
+                                            16 8.049z" />
+                                    </svg>
+                                </a>
+                                <div class="tooltip">Facebook</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-8">
+                    <a href="./index.html"><img class="logo" src="./img/Logo ANDEZ blanco.png" width="100rem"></a>
+                </div>
+                <div class="col-3">
+                    <div class="container1">
+                        <input type="text" name="text" class="input" required="" placeholder="Buscar...">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                                <title>Buscar</title>
+                                <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+                                    fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                                    stroke-width="32" d="M338.29 338.29L448 448"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="seccion">
+        <img class="bg-img" src="./img/LIVING.png" alt="Living">
+        <div class="map-container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="animate__animated animate__slideInLeft">
+                        <h1 class="titulo">Conocé a todos nuestros distribuidores</h1>
+                        <div class="selecProv">
+                            <label for="Provincia">Zona:</label>
+                            <select id="Provincia" name="Provincia">
+                                <option value="Argentina">--Mapa completo--</option>
+                                <optgroup label="Argentina">
+                                    <option value="CABA">Capital Federal</option>
+                                    <option value="Buenos Aires">Buenos Aires</option>
+                                    <option value="Catamarca">Catamarca</option>
+                                    <option value="Chaco">Chaco</option>
+                                    <option value="Chubut">Chubut</option>
+                                    <option value="Cordoba">Córdoba</option>
+                                    <option value="Corrientes">Corrientes</option>
+                                    <option value="Entre Rios">Entre Ríos</option>
+                                    <option value="Formosa">Formosa</option>
+                                    <option value="Jujuy">Jujuy</option>
+                                    <option value="La Pampa">La Pampa</option>
+                                    <option value="La Rioja">La Rioja</option>
+                                    <option value="Mendoza">Mendoza</option>
+                                    <option value="Misiones">Misiones</option>
+                                    <option value="Neuquen">Neuquén</option>
+                                    <option value="Rio Negro">Río Negro</option>
+                                    <option value="Salta">Salta</option>
+                                    <option value="San Juan">San Juan</option>
+                                    <option value="San Luis">San Luis</option>
+                                    <option value="Santa Cruz">Santa Cruz</option>
+                                    <option value="Santa Fe">Santa Fe</option>
+                                    <option value="Santiago del Estero">Santiago del Estero</option>
+                                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                    <option value="Tucuman">Tucumán</option>
+                                </optgroup>
+                                <optgroup label="Uruguay">
+                                    <option value="Montevideo">Montevideo</option>
+                                    <option value="Punta del Este">Punta del Este</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="animate__animated animate__zoomIn animate__slow" id="map"></div>
+                </div>
+            </div>
+            <div class="wrapper animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="slider">
+                    <div class="slide" id="carousel">
+                        <a href="https://balcarce54.com/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Balcarce54.png"></a>
+                        <a href="https://www.bercovich.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Bercovich.png"></a>
+                        <a href="https://www.blaisten.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Blaisten.png"></a>
+                        <a href="https://casaterra.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Casaterra.png"></a>
+                        <a href="https://www.ceramisursa.com/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/CERAMISUR.png"></a>
+                        <a href="https://www.cerrosud.com/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Cerrosud.png"></a>
+                        <a href="https://www.clacerevestimientos.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Clace.png"></a>
+                        <a href="https://cisilottohnos.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Cisilotto.png"></a>
+                        <a href="https://comardesign.com.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Comar.png"></a>
+                        <a href="https://construccionesoeste.misitio.ar/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Construcciones del Oeste.png"></a>
+                        <a href="https://www.darsie.com/" target="_blank"><img class="image"
+                                src="./img/Distribuidores/Darsie.png"></a>
+                    </div>
+                    <div class="controls">
+                        <button class="prev_img">
+                            <img src="./icon/Flecha_izq.png">
+                        </button>
+                        <button class="next_img">
+                            <img src="./icon/Flecha_der.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var map = L.map('map').setView([-38, -63], 4);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        const distribuidores = [
+            { id: "Balcarce54-Centro", name: "Balcarce 54 -Centro-", lat: -32.93518, lng: -60.64981, provincia: "Santa Fe" },
+            { id: "Balcarce54-Circunvalacion", name: "Balcarce 54 -Circunvalación-", lat: -32.92154, lng: -60.72285, provincia: "Santa Fe" },
+            { id: "Bercovich-24Septiembre", name: "Bercovich -24 de Septiembre-", lat: -26.83040, lng: -65.20850, provincia: "Tucuman" },
+            { id: "Bercovich-AmadorLucero", name: "Bercovich -Amador Lucero-", lat: -26.82713, lng: -65.22912, provincia: "Tucuman" },
+            { id: "Bercovich-Concepcion", name: "Bercovich -Concepción-", lat: -27.34784, lng: -65.58393, provincia: "Tucuman" },
+            { id: "Blaisten-Escobar", name: "Blaisten -Escobar-", lat: -34.36163, lng: -58.79732, provincia: "Buenos Aires" },
+            { id: "Blaisten-Floresta", name: "Blaisten -Floresta-", lat: -34.63802, lng: -58.48036, provincia: "CABA" },
+            { id: "Blaisten-Martinez", name: "Blaisten -Martinez-", lat: -34.50286, lng: -58.53887, provincia: "Buenos Aires" },
+            { id: "Blaisten-Palermo", name: "Blaisten -Palermo-", lat: -34.58437, lng: -58.43344, provincia: "CABA" },
+            { id: "Blaisten-Pilar", name: "Blaisten -Pilar-", lat: -34.44422, lng: -58.86926, provincia: "Buenos Aires" },
+            { id: "Casaterra-Fisherton", name: "Casaterra -Fisherton-", lat: -32.93027, lng: -60.72551, provincia: "Santa Fe" },
+            { id: "Casaterra-Oronio", name: "Casaterra -Oroño-", lat: -32.98416, lng: -60.66323, provincia: "Santa Fe" },
+            { id: "Ceramisur-Berazategui", name: "Ceramisur -Berazategui-", lat: -34.78200, lng: -58.22350, provincia: "Buenos Aires" },
+            { id: "Ceramisur-FlorencioVarela", name: "Ceramisur -Florencio Varela-", lat: -34.80210, lng: -58.27816, provincia: "Buenos Aires" },
+            { id: "Cerrosud-Constitucion", name: "Cerrosud -Constitución-", lat: -37.96958, lng: -57.54601, provincia: "Buenos Aires" },
+            { id: "Cerrosud-JuanBJusto", name: "Cerrosud -Juan B. Justo-", lat: -38.02161, lng: -57.56721, provincia: "Buenos Aires" },
+            { id: "ClaceRevestimiento", name: "Clace Revestimientos", lat: -36.91928, lng: -60.30138, provincia: "Buenos Aires" },
+            { id: "Cisilotto", name: "Cisilotto Hnos", lat: -34.61838, lng: -58.83817, provincia: "Buenos Aires" },
+            { id: "Comar-Brown", name: "Comar Design -Brown-", lat: -38.73344, lng: -62.25087, provincia: "Buenos Aires" },
+            { id: "Comar-Sarmiento", name: "Comar Design -Sarmiento-", lat: -38.71439, lng: -62.26377, provincia: "Buenos Aires" },
+            { id: "ConstruccionesOeste", name: "Construcciones del Oeste", lat: -33.02736, lng: -58.54525, provincia: "Entre Rios" },
+            { id: "Darsie-CasaCentral", name: "Darsie -Casa Central-", lat: -31.40807, lng: -64.17720, provincia: "Cordoba" },
+            { id: "Darsie-Hiper", name: "Darsie -Hiper Construcción-", lat: -31.36165, lng: -64.21852, provincia: "Cordoba" },
+            { id: "Darsie-Molinos", name: "Darsie -Los Molinos-", lat: -31.45601, lng: -64.20067, provincia: "Cordoba" },
+            { id: "Domus", name: "Domus", lat: -32.95532, lng: -60.65067, provincia: "Santa Fe"  },
+            { id: "ElectricaBoia", name: "Ecléctica Boia", lat: -34.11179, lng: -59.01312, provincia: "Buenos Aires" },
+            { id: "Elete", name: "Eleté Cerámicos", lat: -35.65665, lng: -63.75579, provincia: "La Pampa"  },
+            { id: "EstructuralesRanquel", name: "Estructurales Ranquel", lat: -33.09222, lng: -64.32287, provincia: "Cordoba" },
+            { id: "FamiliaBercomat-CABA", name: "Familia Bercomat -Capital Federal", lat: -34.63666, lng: -58.47805, provincia: "CABA" },
+            { id: "FamiliaBercomat-DonTorcuato", name: "Familia Bercomat -Don Torcuato-", lat: -34.48732, lng: -58.60578, provincia: "Buenos Aires" },
+            { id: "Fedan", name: "Fedan", lat: -34.72632, lng: -58.25023, provincia: "Buenos Aires" },
+            { id: "Foschia-CasaCentral", name: "Foschia -Casa Central-", lat: -34.47429, lng: -58.66324, provincia: "Buenos Aires" },
+            { id: "Foschia-Zarate", name: "Foschia -Zarate-", lat: -34.10695, lng: -59.02199, provincia: "Buenos Aires" },
+            { id: "Galo", name: "Herrajes Galo", lat: -34.55156, lng: -58.45182, provincia: "CABA" },
+
+
+        ];
+
+
+        const provincias = {
+            "Argentina": { lat: -38, lng: -63, zoom: 4 },
+            "CABA": { lat: -34.6037, lng: -58.3816, zoom: 11 },
+            "Buenos Aires": { lat: -36.6769, lng: -60.5588, zoom: 7 },
+            "Catamarca": { lat: -28.4696, lng: -65.7852, zoom: 7 },
+            "Chaco": { lat: -26.3864, lng: -60.7658, zoom: 7 },
+            "Chubut": { lat: -43.2934, lng: -65.1115, zoom: 6 },
+            "Cordoba": { lat: -31.4201, lng: -64.1888, zoom: 7 },
+            "Corrientes": { lat: -27.4692, lng: -58.8306, zoom: 7 },
+            "Entre Rios": { lat: -32.0589, lng: -59.2014, zoom: 7 },
+            "Formosa": { lat: -26.1852, lng: -58.1754, zoom: 7 },
+            "Jujuy": { lat: -24.1858, lng: -65.2995, zoom: 7 },
+            "La Pampa": { lat: -37.1316, lng: -65.4467, zoom: 6 },
+            "La Rioja": { lat: -29.4133, lng: -66.8558, zoom: 7 },
+            "Mendoza": { lat: -32.8895, lng: -68.8458, zoom: 7 },
+            "Misiones": { lat: -26.8754, lng: -54.6517, zoom: 7 },
+            "Neuquen": { lat: -38.9516, lng: -68.0591, zoom: 7 },
+            "Rio Negro": { lat: -40.8261, lng: -63.0266, zoom: 6 },
+            "Salta": { lat: -24.7821, lng: -65.4232, zoom: 7 },
+            "San Juan": { lat: -31.5375, lng: -68.5364, zoom: 7 },
+            "San Luis": { lat: -33.3017, lng: -66.3378, zoom: 7 },
+            "Santa Cruz": { lat: -48.7737, lng: -69.1911, zoom: 5 },
+            "Santa Fe": { lat: -31.6333, lng: -60.7000, zoom: 7 },
+            "Santiago del Estero": { lat: -27.7834, lng: -64.2642, zoom: 7 },
+            "Tierra del Fuego": { lat: -54.8019, lng: -68.3030, zoom: 6 },
+            "Tucuman": { lat: -26.8083, lng: -65.2176, zoom: 8 },
+
+            "Montevideo": { lat: -34.9011, lng: -56.1645, zoom: 11 },
+            "Punta del Este": { lat: -34.9670, lng: -54.9500, zoom: 12 }    
+        };
+
+        const iconNormal = L.icon({
+            iconUrl: './icon/marker-normal.png',
+            iconSize: [24, 24],
+            iconAnchor: [12, 12]
+        });
+        
+        const iconActivo = L.icon({
+            iconUrl: './icon/marker-activo.png',
+            iconSize: [36, 36],
+            iconAnchor: [16, 16]
+        });
+
+        const markers = {};
+
+        distribuidores.forEach(d => {
+            const marker = L.marker([d.lat, d.lng], { icon: iconNormal })
+                .addTo(map)
+                .bindPopup(d.name);
+        
+            markers[d.id] = { marker, data: d };
+        });
+
+        const selectProvincia = document.getElementById("Provincia");
+
+        selectProvincia.addEventListener("change", function () {
+            const provincia = this.value;
+        
+            Object.values(markers).forEach(({ marker, data }) => {
+                if (provincia === "Argentina" || data.provincia === provincia) {
+                    marker.addTo(map);
+                    marker.setIcon(data.provincia === provincia ? iconActivo : iconNormal);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        
+            if (provincias[provincia]) {
+                const { lat, lng, zoom } = provincias[provincia];
+                map.flyTo([lat, lng], zoom, { duration: 1.2 });
+            }
+        });
+
+    </script>
+
+    
+    
+
+    <script>
+        const slide = document.getElementById("carousel");
+        const prev = document.querySelector(".prev_img");
+        const next = document.querySelector(".next_img");
+        const wrapper = document.querySelector(".wrapper");
+
+        let speed = 1;
+        let position = 0;
+        let paused = false;
+
+        slide.innerHTML += slide.innerHTML;
+
+        const loopWidth = slide.scrollWidth / 2;
+
+        function render() {
+            slide.style.transform = `translateX(${position}px)`;
+        }
+
+        function animate() {
+            if (!paused) {
+                position -= speed;
+                if (Math.abs(position) >= loopWidth) {
+                    position = 0;
+                }
+                render();
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        wrapper.addEventListener("mouseenter", () => paused = true);
+        wrapper.addEventListener("mouseleave", () => paused = false);
+
+        function moveManual(amount) {
+            position += amount;
+
+            if (position > 0) {
+                position = -loopWidth + amount;
+            }
+            if (Math.abs(position) >= loopWidth) {
+                position = 0;
+            }
+
+            render();
+        }
+
+        next.addEventListener("click", () => moveManual(220));
+        prev.addEventListener("click", () => moveManual(-220));
+    </script>
+
+
+</body>
+
+</html>
