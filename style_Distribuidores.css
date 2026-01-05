@@ -384,7 +384,7 @@ ul {
     align-items: center;
 }
 
-.seccion::before{
+.seccion::before {
     content: "";
     position: fixed;
     top: 0;
@@ -425,7 +425,7 @@ ul {
 .titulo {
     color: #fff;
     font-family: "Advent Pro", sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -456,14 +456,13 @@ ul {
     z-index: 100;
 }
 
-/* Contenedor visual del select */
 .selecProv select {
     width: 100%;
     padding: 22px 42px 12px 14px;
     font-size: 0.95rem;
     color: #333;
     background-color: rgba(255, 255, 255, 0.92);
-   /* border: 1px solid #ddd;*/
+    /* border: 1px solid #ddd;*/
     border-radius: 10px;
     outline: none;
     appearance: none;
@@ -473,18 +472,15 @@ ul {
     z-index: 50;
 }
 
-/* Hover */
 .selecProv select:hover {
     border-color: #aaa;
 }
 
-/* Focus */
 .selecProv select:focus {
     border-color: #000;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Flecha custom */
 .selecProv::after {
     content: "";
     position: absolute;
@@ -498,7 +494,6 @@ ul {
     pointer-events: none;
 }
 
-/* Opción por defecto */
 .selecProv select option[value=" "] {
     color: #999;
 }
@@ -563,10 +558,11 @@ ul {
     justify-content: space-between;
     padding: 0 15px;
     pointer-events: none;
-    
+
 }
 
-.prev_img, .next_img{
+.prev_img,
+.next_img {
     pointer-events: auto;
     background: transparent;
     border: 0;
