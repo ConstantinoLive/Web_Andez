@@ -271,10 +271,16 @@ ul {
 }
 
 .redes {
-    display: flex;
+    /*display: flex;
     justify-content: end;
     align-items: start;
-    flex-direction: column;
+    flex-direction: column;*/
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow:column; 
+    gap: 10px 120px; 
+    justify-content: start;
+    align-items: start;
 }
 
 .redes .icon-content {
@@ -373,6 +379,26 @@ ul {
 .redes .icon-content a[data-social="youtube"] .filled,
 .redes .icon-content a[data-social="youtube"]~.tooltip {
     background-color: #ff0000;
+}
+
+.redes .icon-content a[data-social="pinterest"] .filled,
+.redes .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+
+.redes .icon-content a[data-social="whatsapp"] .filled,
+.redes .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.redes .icon-content a[data-social="X"] .filled,
+.redes .icon-content a[data-social="X"] ~ .tooltip {
+  background-color: #0a0a0a;
+}
+
+.redes .icon-content a[data-social="tiktok"] .filled,
+.redes .icon-content a[data-social="tiktok"] ~ .tooltip {
+  background-color: #0a0a0a;
 }
 
 /************ Modal Empresa **********/
