@@ -183,10 +183,36 @@
     border-spacing: 0;
     background: #ffffff;
     border-radius: 12px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     font-family: "Montserrat", sans-serif;
 }
+
+.table-wrapper {
+    max-height: 250px;
+    min-width: 1500px;     
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 12px;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+
+.table-wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    /*background: #cfcfcf;*/
+    background: #9663e8c5;
+    border-radius: 4px;
+}
+
 
 .table thead,
 .titulo_columnas {
@@ -213,14 +239,26 @@
     vertical-align: middle;
 }
 
-.table tbody tr:hover td {
+.table tbody tr:hover td{
     background-color: rgba(170, 170, 170, 0.35);
+    /*Tenerlo como opcion*/
+    /*background-color: #9663e8c5; 
+    color: #ffffff;*/
+    
 }
 
+/*Tenerlo como opcion*/
+/*
+.table tbody tr:hover img {
+    filter: invert(100%) brightness(300%);
+}*/
+
 .table input[type="checkbox"] {
-    transform: scale(1.1);
+    transform: scale(1.2);
     margin-right: 15px;
     cursor: pointer;
+    accent-color: #9663e8;
+    
 }
 
 .table td:nth-child(3),
@@ -414,6 +452,15 @@
     font-family: "Montserrat", sans-serif;
     max-height: 400px;
     overflow-y: scroll;
+}
+.form-card::-webkit-scrollbar {
+    width: 4px;
+}
+
+.form-card::-webkit-scrollbar-thumb {
+    /*background: #cfcfcf;*/
+    background: #9663e8c5;
+    border-radius: 4px;
 }
 
 /* Grupo */
