@@ -262,7 +262,7 @@
     cursor: pointer;
     padding: 4px;
     margin: 0 4px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .table td .edel img {
@@ -346,7 +346,7 @@
     padding: 10px 12px;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     min-height: 36px;
 }
 
