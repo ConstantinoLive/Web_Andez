@@ -157,8 +157,10 @@
 .seccion {
     position: relative;
     margin-left: 28vh;
+    margin-bottom: 10px;
     padding: 2rem 1.5rem;
     min-height: calc(100vh - 80px);
+    
 }
 
 .titulo_seccion {
@@ -167,7 +169,7 @@
     color: #4d4d4d;
     font-family: "Alumni Sans Pinstripe", sans-serif;
     text-align: left;
-
+    
 }
 
 /* ======= Tabla inicial ======== */
@@ -184,7 +186,7 @@
 }
 
 .table-wrapper {
-    max-height: 350px;          
+    max-height: 550px;          
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 12px;
@@ -226,7 +228,7 @@
 }
 
 .table td {
-    padding: 14px 12px;
+    padding: 4px 12px;
     font-size: 0.9rem;
     color: #4d4d4d;
     border-bottom: 1px solid #eeeeee;
@@ -234,22 +236,31 @@
     text-align: center;
 }
 
-.table tbody tr:hover td {
-    background-color: rgba(170, 170, 170, 0.35);
-}
-
 .table td img{
-    width: 55px;
-    height: 55px;
+    width: 20%;
+    height: 20%;
+    /*transition: all 0.3s ease-in-out;*/
 }
+/*
+.table td img:hover{
+    position: relative;
+    z-index: 1000;
+    transform: scale(2.9);
+}*/
 
-.table td:nth-child(2){
-    max-width: 320px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.table tbody tr:hover td{
+    background-color: rgba(170, 170, 170, 0.35);
+    /*Tenerlo como opcion*/
+    /*background-color: #9663e8c5; 
+    color: #ffffff;*/
     
 }
+
+/*Tenerlo como opcion*/
+/*
+.table tbody tr:hover img {
+    filter: invert(100%) brightness(300%);
+}*/
 
 .table td:last-child {
     max-width: 320px;
@@ -267,8 +278,8 @@
 }
 
 .table td .edel img {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     opacity: 0.75;
 }
 
@@ -312,7 +323,7 @@
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     font-family: "Montserrat", sans-serif;
-    max-height: 450px;
+    max-height: 500px;
     
 }
 
@@ -332,18 +343,20 @@
 }
 
 /* Inputs */
-.form-group input{
+.form-group input,
+.form-group select{
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 10px 12px;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
-    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
     min-height: 36px;
 }
 
 /* Focus */
-.form-group input:focus{
+.form-group input:focus,
+.form-group select:focus{
     outline: none;
     border-color: #bdbdbd;
     box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
@@ -411,6 +424,7 @@
     box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 }
 
+
 /* ====== Boton eliminados ======= */
 
 .btn-eliminados {
@@ -419,24 +433,24 @@
     right: 10px;
 }
 
+
 /* ===== Preview ===== */
 
 .preview-card {
     position: relative;
-    /*width: 100%;
-    height: 400px;*/
+    width: 100%;
+    height: 700px;
     border-radius: 14px;
     overflow: hidden;
-    /*box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    background: #000;*/
-    margin-left: 280px;
-    margin-top: 100px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    background: #d4d4d450;
+    margin-left: 80px;
 }
 
 .preview-card img {
-    /*width: 20%;
-    height: 20%;*/
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
 }
 
 /* ===== Animación Preview ===== */

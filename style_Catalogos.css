@@ -448,7 +448,7 @@
 .preview-card {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 500px;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.25);
