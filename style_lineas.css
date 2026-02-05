@@ -256,6 +256,7 @@
 }
 
 .table td .edel {
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
@@ -273,15 +274,6 @@
 .table td .edel:hover img {
     transform: scale(1.15);
     opacity: 1;
-}
-
-.table td .edel {
-    position: relative;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    margin: 0 4px;
 }
 
 .tooltip {
@@ -390,11 +382,72 @@
     box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 }
 
+/* ========= Busqueda ========= */
 
-/* ====== Boton eliminados ======= */
+.top-bar{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
 
-.btn-eliminados {
-    position: absolute;
-    top: 110px;  
-    right: 10px;
+.search-card{
+    background:#fff;
+    padding:1.5rem 2rem;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    font-family:"Montserrat",sans-serif;
+    min-width:820px;
+}
+
+.search-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.search-group label{
+    font-size:0.75rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#777;
+    margin-bottom:6px;
+}
+
+.search-input{
+    display:flex;
+    align-items:center;
+}
+
+.search-input select{
+    flex:1;
+    border:1px solid #e0e0e0;
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:0.9rem;
+    font-family:"Montserrat",sans-serif;
+    min-height:36px;
+}
+
+.search-input select:focus{
+    outline:none;
+    border-color:#bdbdbd;
+    box-shadow:0 0 0 2px rgba(0,0,0,0.05);
+}
+
+.btn-search{
+    border:none;
+    background: transparent;
+    padding:7px 24px;
+    cursor:pointer;
+    transition:all .3s ease-in-out;
+}
+
+.btn-search img{
+    width:35px;
+    opacity:.75;
+}
+
+.btn-search:hover{
+    transform: scale(1.15);
+    opacity: 1;
 }
