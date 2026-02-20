@@ -50,7 +50,7 @@
                 </div>
                 <div class="separador">
                     <li class="item_lista">
-                        <a href="#"><img src="./icon/Diseño/tienda3.png" alt=" ">Distribuidores</a>
+                        <a href="./Setting_distribuidores.html"><img src="./icon/Diseño/tienda3.png" alt=" ">Distribuidores</a>
                     </li>
                 </div>
                 <li class="item_lista">
@@ -71,24 +71,28 @@
                 <div class="search-group">
                     <label>Filtro</label>
                     <div class="search-input">
-                        <select id="linea" name="linea">
-                            <option value=" ">Líneas...</option>
-                            <option value="19">Línea Match</option>
-                            <option value="37">Línea Next</option>
-                            <option value="17">Línea Cross</option>
-                            <option value="22">Línea Giraffe</option>
-                            <option value="53">Línea Urbana</option>
-                            <option value="18">Línea Black</option>
-                            <option value="20">Línea Jazz</option>
-                        </select>
-                        <select id="art" name="art">
-                            <option value=" ">Artículos...</option>
-                            <option value="500">500</option>
-                            <option value="550">550</option>
-                            <option value="600">600</option>
-                            <option value="610">610</option>
-                            <option value="700">700</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select id="linea" name="linea">
+                                <option value=" ">Líneas...</option>
+                                <option value="19">Línea Match</option>
+                                <option value="37">Línea Next</option>
+                                <option value="17">Línea Cross</option>
+                                <option value="22">Línea Giraffe</option>
+                                <option value="53">Línea Urbana</option>
+                                <option value="18">Línea Black</option>
+                                <option value="20">Línea Jazz</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="art" name="art">
+                                <option value=" ">Artículos...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
                         <button class="btn-search">
                             <img src="./icon/Diseño/buscar.png" alt="">
                         </button>
@@ -268,27 +272,31 @@
                 <div class="form-card">
                     <div class="form-group">
                         <label for="linea">Nombre de la Líneas</label>
-                        <select id="linea" name="linea">
-                            <option value=" ">-- Seleccione una línea --</option>
-                            <option value="Match">Línea Match</option>
-                            <option value="Next">Línea Next</option>
-                            <option value="Cross">Línea Cross</option>
-                            <option value="Giraffe">Línea Giraffe</option>
-                            <option value="Urbana">Línea Urbana</option>
-                            <option value="Black">Línea Black</option>
-                            <option value="Jazz">Línea Jazz</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select id="linea" name="linea">
+                                <option value=" ">-- Seleccione una línea --</option>
+                                <option value="Match">Línea Match</option>
+                                <option value="Next">Línea Next</option>
+                                <option value="Cross">Línea Cross</option>
+                                <option value="Giraffe">Línea Giraffe</option>
+                                <option value="Urbana">Línea Urbana</option>
+                                <option value="Black">Línea Black</option>
+                                <option value="Jazz">Línea Jazz</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="tipo">Artículo</label>
-                        <select id="tipo" name="tipo">
-                            <option value=" ">-- Seleccione un tipo --</option>
-                            <option value="lavatorioApoyo">500</option>
-                            <option value="lavatorioPared">550</option>
-                            <option value="bañera">600</option>
-                            <option value="ducha">610</option>
-                            <option value="bidet">700</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select id="tipo" name="tipo">
+                                <option value=" ">-- Seleccione un tipo --</option>
+                                <option value="lavatorioApoyo">500</option>
+                                <option value="lavatorioPared">550</option>
+                                <option value="bañera">600</option>
+                                <option value="ducha">610</option>
+                                <option value="bidet">700</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>URL Repuestos</label>

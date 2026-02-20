@@ -342,6 +342,47 @@
     margin-bottom: 6px;
 }
 
+/* Flecha select */
+.form-group select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-wrapper{
+    position: relative;
+}
+
+.select-wrapper select{
+    width: 100%;
+    padding-right: 40px; 
+    cursor: pointer;
+}
+
+.select-wrapper::after{
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #777;
+    border-bottom: 2px solid #777;
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+    transition: .2s;
+}
+
+.select-wrapper:hover::after{
+    border-color:#9663e8;
+    transform: scale(1.5) translateY(-50%) rotate(45deg);
+}
+
+.select-wrapper:focus-within::after{
+    border-color:#9663e8;
+    transform: scale(1.5) translateY(-10%) rotate(225deg);
+}
+
 /* Inputs */
 .form-group input,
 .form-group select{
@@ -447,6 +488,17 @@
 .search-group{
     display:flex;
     flex-direction:column;
+}
+
+.search-input select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.search-input .select-wrapper{
+    position: relative;
+    flex: 1;
 }
 
 .search-group label{
