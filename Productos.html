@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing | Productos</title>
+
+    <link rel="stylesheet" href="style_productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Logo ANDEZ negro.png" alt="Andez" width="130rem">
+        <button class="neu-button"><img src="./icon/Diseño/icons8-cerrar-sesión2.png"
+                alt=" "><span>Salir</span></button>
+        <div class="fon_nav_index">
+            <ul class="menu_index">
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Marketing.html"><img src="./icon/Diseño/ui-ux.png" alt=" ">Diseño</a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Lineas.html"><img src="./icon/Diseño/etiqueta.png">Líneas</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Productos.html"><img src="./icon/Diseño/faucet2.png">Productos</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Catalogos.html"><img src="./icon/Diseño/Folleto.png" alt=" ">Catálogo</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Instructivos.html"><img src="./icon/Diseño/Manual_instalacion.png" alt=" ">Manual
+                            instalación</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Repuestos.html"><img src="./icon/Diseño/repuestos.png" alt=" ">Repuestos</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Planos.html"><img src="./icon/Diseño/Plano.png" alt=" ">Planos</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Colores.html"><img src="./icon/Diseño/Colores.png" alt=" ">Colores</a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Atributos.html"><img src="./icon/Diseño/certificado.png" alt=" ">Atributos</a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Setting_distribuidores.html"><img src="./icon/Diseño/tienda3.png"
+                                alt=" ">Distribuidores</a>
+                    </li>
+                </div>
+                <li class="item_lista">
+                    <a href="#"><img src="./icon/Diseño/configuración.png" alt=" ">Configuración</a>
+                </li>
+            </ul>
+            <div class="usuario">
+                <img src="./icon/Diseño/usuario.png" alt=" " width="10%">
+                <a href="#" class="user">Lucas: Marketing</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="seccion container mt-3">
+        <h2 class="titulo_seccion">Productos</h2>
+        <div class="top-bar">
+            <div class="search-card">
+                <div class="search-group">
+                    <label>Filtro</label>
+                    <div class="search-input">
+                        <div class="select-wrapper">
+                            <select id="linea" name="linea">
+                                <option value=" ">Líneas...</option>
+                                <option value="19">Línea Match</option>
+                                <option value="37">Línea Next</option>
+                                <option value="17">Línea Cross</option>
+                                <option value="22">Línea Giraffe</option>
+                                <option value="53">Línea Urbana</option>
+                                <option value="18">Línea Black</option>
+                                <option value="20">Línea Jazz</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="art" name="art">
+                                <option value=" ">Código...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">
+                            <img src="./icon/Diseño/buscar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="neu-button2">
+                <img src="./icon/Diseño/eliminar-archivo.png" alt=" ">
+                <span>Ver eliminados</span>
+            </button>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr class="titulo_columnas">
+                        <th>Línea</th>
+                        <th>Código</th>
+                        <th>Artículo</th>
+                        <th>Descripción</th>
+                        <th>Color</th>
+                        <th>Tipo de producto</th>
+                        <th>Es portada?</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cross</td>
+                        <td>180.17</td>
+                        <td>Monocomando alto</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Bronce viejo</td>
+                        <td>Monocomando</td>
+                        <td><input type="checkbox" class="check"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Match</td>
+                        <td>500.19</td>
+                        <td>Lavatorio de apoyo</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Match</td>
+                        <td>700.19</td>
+                        <td>Bidet</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nice</td>
+                        <td>500.50</td>
+                        <td>Lavatorio de apoyo</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Negro</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Next</td>
+                        <td>600.37</td>
+                        <td>Bañera con transferencia</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Next</td>
+                        <td>500.37</td>
+                        <td>Lavatorio de apoyo</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Klub</td>
+                        <td>700.35</td>
+                        <td>Bidet</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nice</td>
+                        <td>600.50</td>
+                        <td>Bañera con transferencia</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Cromo</td>
+                        <td>Bimando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Match</td>
+                        <td>185.19</td>
+                        <td>Monocomando lateral bajo</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</td>
+                        <td>Negro</td>
+                        <td>Monocomando</td>
+                        <td><input type="checkbox"><span>si/no</span></td>
+                        <td>
+                            <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                    class="tooltip">Editar</span></button>
+                            <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                    class="tooltip">Eliminar</span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="separador"></div>
+
+    <section class="seccion container">
+        <h2 class="titulo_seccion">Edición</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-card" style="height: 670px;">
+                    <div class="form-group">
+                        <label>Línea</label>
+                        <div class="select-wrapper">
+                            <select id="linea" name="linea">
+                                <option value=" ">Líneas...</option>
+                                <option value="19">Línea Match</option>
+                                <option value="37">Línea Next</option>
+                                <option value="17">Línea Cross</option>
+                                <option value="22">Línea Giraffe</option>
+                                <option value="53">Línea Urbana</option>
+                                <option value="18">Línea Black</option>
+                                <option value="20">Línea Jazz</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Artículo</label>
+                        <div class="select-wrapper">
+                            <select id="art" name="art">
+                                <option value=" ">Código...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <textarea rows="6"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Colores</label>
+                        <div class="select-wrapper">
+                            <select id="col" name="col">
+                                <option value=" ">Código...</option>
+                                <option value="cr">Cromo</option>
+                                <option value="ng">Negro</option>
+                                <option value="bv">Bronce viejo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de producto</label>
+                        <div class="select-wrapper">
+                            <select id="tp" name="tp">
+                                <option value=" ">Seleccione...</option>
+                                <option value="lava">Lavatorio de apoyo</option>
+                                <option value="lavp">Lavatorio de pared</option>
+                                <option value="bañ">Bañera</option>
+                                <option value="bid">Bidet</option>
+                                <option value="Duc">Ducha</option>
+                                <option value="Cor">Barral corto</option>
+                                <option value="Lar">Barral largo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="check-list">
+                        <label>
+                            <input type="checkbox">
+                            <span>Es portada?</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <h4 class="prev">Atributos</h4>
+                <div class="form-card" style="max-height: 600px;">
+                    <div class="form-group">
+                        <!--<label>Atributos</label>-->
+                        <ul class="check-list">
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>100% Metálico</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Aireador espumante</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Antimovimiento</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Autonivelante</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Bidet flexible</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Cierre cerámico</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Cromado brillante</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Ducha con antisarro</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Fácil instalación</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Mecanizado de barra</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Protectores de bañera</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Rápida instalación</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="form-card" style="max-height: 670px;">
+                    <div class="form-group with-button">
+                        <label>URL imagen sin fondo</label>
+                        <div class="input-action">
+                            <input type="url" data-preview="image">
+                            <button type="button" data-action="image"><img src="./icon/Diseño/añadir.png"></button>
+                            <button type="button" data-reset="image"><img src="./icon/Diseño/menos.png"></button>
+                        </div>
+                    </div>
+                    <div class="preview-card">
+                        <img id="previewImage" src="./img/no_image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btncomm">
+            <div class="mt-5">
+                <button class="neu-button2">
+                    <img src="./icon/Diseño/Agregar.png" alt=" ">
+                    <span>Agregar</span>
+                </button>
+            </div>
+            <div class="mt-5">
+                <button class="neu-button2"><img src="./icon/Diseño/editar (1).png"
+                        alt=" "><span>Editar</span></button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const previewCard = document.querySelector('.preview-card');
+        const previewImage = document.getElementById('previewImage');
+
+        const previewDefaults = {
+            image: './img/no_image.png'
+        };
+
+        function animatePreview(callback) {
+            if (previewCard.classList.contains('animating')) return;
+
+            previewCard.classList.add('fade-out', 'animating');
+
+            setTimeout(() => {
+                callback();
+
+                previewCard.classList.remove('fade-out');
+                previewCard.classList.add('fade-in');
+
+                setTimeout(() => {
+                    previewCard.classList.remove('fade-in', 'animating');
+                }, 300);
+
+            }, 250);
+        }
+
+        /* ===========================
+           BOTÓN AÑADIR
+        =========================== */
+        document.querySelectorAll('[data-action]').forEach(button => {
+            button.addEventListener('click', () => {
+
+                const type = button.dataset.action;
+                const wrapper = button.closest('.input-action');
+                const input = wrapper.querySelector('[data-preview]');
+                const value = input.value.trim();
+
+                animatePreview(() => {
+                    switch (type) {
+                        case 'image':
+                            previewImage.src = value || previewDefaults.image;
+                            break;
+                    }
+                });
+            });
+        });
+
+        /* ===========================
+           BOTÓN MENOS (RESET)
+        =========================== */
+        document.querySelectorAll('[data-reset]').forEach(button => {
+            button.addEventListener('click', () => {
+
+                const type = button.dataset.reset;
+                const wrapper = button.closest('.input-action');
+                const input = wrapper.querySelector('[data-preview]');
+
+                animatePreview(() => {
+
+                    input.value = '';
+
+                    // Restaura SOLO el preview correspondiente
+                    switch (type) {
+                        case 'image':
+                            previewImage.src = previewDefaults.image;
+                            break;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
