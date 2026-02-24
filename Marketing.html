@@ -17,51 +17,53 @@
         <img class="logo" src="./img/Logo ANDEZ negro.png" alt="Andez" width="130rem">
         <button class="neu-button"><img src="./icon/Diseño/icons8-cerrar-sesión2.png"
                 alt=" "><span>Salir</span></button>
-        <div class="fon_nav_index">
+        <div class="fon_nav_index sidebar-collapsed">
+                <button class="btnlat"><img src="./icon/Diseño/barra-lateral.png"></button>
             <ul class="menu_index">
                 <div class="separador">
                     <li class="item_lista">
-                        <a href="./Marketing.html"><img src="./icon/Diseño/ui-ux.png" alt=" ">Diseño</a>
+                        <a href="./Marketing.html"><img src="./icon/Diseño/ui-ux.png" alt=" "><span>Diseño</span></a>
                     </li>
                 </div>
                 <div class="separador">
                     <li class="item_lista">
-                        <a href="./Lineas.html"><img src="./icon/Diseño/etiqueta.png">Líneas</a>
+                        <a href="./Lineas.html"><img src="./icon/Diseño/etiqueta.png"><span>Líneas</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Productos.html"><img src="./icon/Diseño/faucet2.png">Productos</a>
+                        <a href="./Productos.html"><img src="./icon/Diseño/faucet2.png"><span>Productos</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Catalogos.html"><img src="./icon/Diseño/Folleto.png" alt=" ">Catálogo</a>
+                        <a href="./Catalogos.html"><img src="./icon/Diseño/Folleto.png" alt=" "><span>Catálogo</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Instructivos.html"><img src="./icon/Diseño/Manual_instalacion.png" alt=" ">Manual instalación</a>
+                        <a href="./Instructivos.html"><img src="./icon/Diseño/Manual_instalacion.png" alt=" "><span>Manual
+                            instalación</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Repuestos.html"><img src="./icon/Diseño/repuestos.png" alt=" ">Repuestos</a>
+                        <a href="./Repuestos.html"><img src="./icon/Diseño/repuestos.png" alt=" "><span>Repuestos</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Planos.html"><img src="./icon/Diseño/Plano.png" alt=" ">Planos</a>
+                        <a href="./Planos.html"><img src="./icon/Diseño/Plano.png" alt=" "><span>Planos</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Colores.html"><img src="./icon/Diseño/Colores.png" alt=" ">Colores</a>
+                        <a href="./Colores.html"><img src="./icon/Diseño/Colores.png" alt=" "><span>Colores</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Atributos.html"><img src="./icon/Diseño/certificado.png" alt=" ">Atributos</a>
+                        <a href="./Atributos.html"><img src="./icon/Diseño/certificado.png" alt=" "><span>Atributos</span></a>
                     </li>
                 </div>
                 <div class="separador">
                     <li class="item_lista">
-                        <a href="./Setting_distribuidores.html"><img src="./icon/Diseño/tienda3.png" alt=" ">Distribuidores</a>
+                        <a href="./Setting_distribuidores.html"><img src="./icon/Diseño/tienda3.png"
+                                alt=" "><span>Distribuidores</span></a>
                     </li>
                 </div>
                 <li class="item_lista">
-                    <a href="#"><img src="./icon/Diseño/configuración.png" alt=" ">Configuración</a>
+                    <a href="#"><img src="./icon/Diseño/configuración.png" alt=" "><span>Configuración</span></a>
                 </li>
             </ul>
             <div class="usuario">
-                <img src="./icon/Diseño/usuario.png" alt=" " width="10%">
-                <a href="#" class="user">Lucas: Marketing</a>
+                <a href="#" class="user"><img src="./icon/Diseño/usuario.png" alt=" ">Lucas: Marketing</a>
             </div>
         </div>
     </header>
@@ -328,7 +330,26 @@
         <h2 class="titulo_seccion">Estilos</h2>
     </section>
 
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.querySelector(".fon_nav_index");
+            const toggleBtn = document.querySelector(".btnlat");
+        
+            if (localStorage.getItem("sidebarState") === "collapsed") {
+                sidebar.classList.add("sidebar-collapsed");
+            }
+        
+            toggleBtn.addEventListener("click", function() {
+                sidebar.classList.toggle("sidebar-collapsed");
+        
+                if (sidebar.classList.contains("sidebar-collapsed")) {
+                    localStorage.setItem("sidebarState", "collapsed");
+                } else {
+                    localStorage.setItem("sidebarState", "expanded");
+                }
+            });
+        });
+        </script>
 </body>
 
 </html>
