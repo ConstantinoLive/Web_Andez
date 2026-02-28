@@ -234,144 +234,6 @@
     
 }
 
-/* ======= Tabla inicial ======== */
-
-.table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: #ffffff;
-    border-radius: 12px;
-    /*overflow: hidden;*/
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    font-family: "Montserrat", sans-serif;
-}
-
-.table-wrapper {
-    max-height: 550px;          
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 12px;
-}
-
-.table thead th {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-}
-
-
-.table-wrapper::-webkit-scrollbar {
-    width: 4px;
-}
-
-.table-wrapper::-webkit-scrollbar-thumb {
-    /*background: #cfcfcf;*/
-    background: #9663e8c5;
-    border-radius: 4px;
-}
-
-
-.table thead,
-.titulo_columnas {
-    background: #f2f2f2;
-}
-
-.table th {
-    padding: 14px 12px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #666;
-    font-weight: 600;
-    border-bottom: 2px solid #e0e0e0;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.table td {
-    padding: 4px 12px;
-    font-size: 0.9rem;
-    color: #4d4d4d;
-    border-bottom: 1px solid #eeeeee;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.table td img{
-    width: 10%;
-    height: 10%;
-    transition: all 0.3s ease-in-out;
-}
-
-.table td img:hover{
-    position: relative;
-    background: #ffffff;
-    z-index: 1000;
-    transform: scale(3.9);
-}
-
-.table tbody tr:hover td{
-    background-color: rgba(170, 170, 170, 0.35);
-    /*Tenerlo como opcion*/
-    /*background-color: #9663e8c5; 
-    color: #ffffff;*/
-    
-}
-
-/*Tenerlo como opcion*/
-/*
-.table tbody tr:hover img {
-    filter: invert(100%) brightness(300%);
-}*/
-
-.table td:last-child {
-    max-width: 320px;
-    white-space: nowrap;
-}
-
-.table td .edel {
-    position: relative;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    margin: 0 15px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.table td .edel img {
-    width: 28px;
-    height: 28px;
-    opacity: 0.75;
-}
-
-.table td .edel:hover img {
-    transform: scale(1.15);
-    background:transparent;
-    opacity: 1;
-}
-
-.tooltip {
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    font-size: 0.75rem;
-    color: #a6a6a6;
-    background: rgba(0, 0, 0, 0.75);
-    padding: 4px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    pointer-events: none;
-    transition: all 0.2s ease;
-}
-
-.edel:hover .tooltip {
-    opacity: 1;
-}
-
 /* ===== Formulario ===== */
 
 .prev{
@@ -387,7 +249,6 @@
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     font-family: "Montserrat", sans-serif;
-    max-height: 500px;
     
 }
 
@@ -448,6 +309,7 @@
 }
 
 /* Inputs */
+.social-item input,
 .form-group input,
 .form-group select{
     border: 1px solid #e0e0e0;
@@ -460,6 +322,7 @@
 }
 
 /* Focus */
+.social-item input:focus,
 .form-group input:focus,
 .form-group select:focus{
     outline: none;
@@ -467,32 +330,27 @@
     box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
 }
 
-/* Input con botón */
-.input-action {
-    display: grid;
-    grid-template-columns: 1fr 36px 36px;
-    gap: 8px;
-    width: 100%;
+/* ===== Redes sociales ===== */
+
+.social-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
 }
 
-.input-action button {
-    background: transparent;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    opacity: 0.55;
-    transition: all 0.2s ease-in-out;
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.input-action button img {
-    width: 36px;
-    height: 36px;
-    
+.social-item img {
+    width: 35px;
+    height: 35px;
 }
 
-.input-action button:hover {
-    transform: scale(1.05);
-    opacity: 1;
+.social-item input {
+    flex: 1;
 }
 
 /* ====== Boton subir ======= */
@@ -529,132 +387,126 @@
     box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 }
 
+/* ======= Tabla inicial ======== */
 
-/* ========= Busqueda ========= */
-
-.top-bar{
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
-    margin-bottom: 2.5rem;
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    /*overflow: hidden;*/
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: "Montserrat", sans-serif;
 }
 
-.search-card{
-    background:#fff;
-    padding:1.5rem 2rem;
-    border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    font-family:"Montserrat",sans-serif;
-    min-width:820px;
+.table-wrapper {
+    max-height: 350px;          
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 12px;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+
+.table-wrapper::-webkit-scrollbar {
+    width: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    /*background: #cfcfcf;*/
+    background: #9663e8c5;
+    border-radius: 4px;
+}
+
+
+.table thead,
+.titulo_columnas {
+    background: #f2f2f2;
+}
+
+.table th {
+    padding: 14px 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 4px 12px;
+    font-size: 0.9rem;
+    color: #4d4d4d;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table tbody tr:hover td{
+    background-color: rgba(170, 170, 170, 0.35);
+    /*Tenerlo como opcion*/
+    /*background-color: #9663e8c5; 
+    color: #ffffff;*/
     
 }
 
-.search-group{
-    display:flex;
-    flex-direction:column;
+/*Tenerlo como opcion*/
+/*
+.table tbody tr:hover img {
+    filter: invert(100%) brightness(300%);
+}*/
+
+.table td:last-child {
+    max-width: 320px;
+    white-space: nowrap;
 }
 
-.search-input select{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.search-input .select-wrapper{
+.table td .edel {
     position: relative;
-    flex: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin: 0 4px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.search-group label{
-    font-size:0.75rem;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    color:#777;
-    margin-bottom:6px;
+.table td .edel img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.75;
 }
 
-.search-input{
-    display:flex;
-    align-items:center;
-    gap: 14px;
-}
-
-.search-input select{
-    flex:1;
-    border:1px solid #e0e0e0;
-    border-radius:8px;
-    padding:10px 12px;
-    font-size:0.9rem;
-    font-family:"Montserrat",sans-serif;
-    min-height:36px;
-}
-
-.search-input select:focus{
-    outline:none;
-    border-color:#bdbdbd;
-    box-shadow:0 0 0 2px rgba(0,0,0,0.05);
-}
-
-.btn-search{
-    border:none;
-    background: transparent;
-    padding:7px 4px;
-    cursor:pointer;
-    transition:all .3s ease-in-out;
-}
-
-.btn-search img{
-    width:35px;
-    opacity:.75;
-}
-
-.btn-search:hover{
+.table td .edel:hover img {
     transform: scale(1.15);
     opacity: 1;
 }
 
-/* ===== Preview ===== */
-
-.preview-card {
-    position: relative;
-    width: 100%;
-    height: 700px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    background: #d4d4d450;
-    margin-left: 80px;
-}
-
-.preview-card img {
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
-}
-
-/* ===== Animación Preview ===== */
-
-.preview-card {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.preview-card.animating {
-    transform: scale(0.985);
-}
-
-/* Contenido animable */
-.preview-card img{
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Estado oculto */
-.preview-card.fade-out img{
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
-    transform: translateY(8px);
+    font-size: 0.75rem;
+    color: #a6a6a6;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 0.2s ease;
 }
 
-/* Estado visible */
-.preview-card.fade-in img{
+.edel:hover .tooltip {
     opacity: 1;
-    transform: translateY(0);
 }

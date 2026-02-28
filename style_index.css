@@ -416,10 +416,21 @@ ul {
     position: relative;
     text-align: end;
     right: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
+.modal-body dt{
+    font-size: 2vh;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.modal-body dd,
 .modal-body p{
-    text-align: justify;
+    text-align:justify;
+    hyphens: auto;
     font-size: 1.8vh;
     padding: 15px;
 }
