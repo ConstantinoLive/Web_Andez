@@ -239,14 +239,7 @@
     </section>
 
     <div class="separador"></div>
-
-    <section class="seccion container mt-3">
-        <h2 class="titulo_seccion">Página de estilos</h2>
-
-    </section>
-
-    <div class="separador"></div>
-
+    
     <section class="seccion container mt-3">
         <h2 class="titulo_seccion">Edición de páginas</h2>
         <div class="top-bar">
@@ -363,7 +356,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="neu-button2"><img src="./icon/Diseño/icons8-subir2-48.png"
+                        <button class="neu-button2" id="uploadBackground"><img src="./icon/Diseño/icons8-subir2-48.png"
                                 alt=" "><span>Subir</span></button>
                     </div>
                 </div>
@@ -433,6 +426,35 @@
                             <input type="checkbox" id="defaultText">
                         </div>
                         <div class="form-group2 col-12">
+                            <label for="producto">Posición
+                                <div class="item-hints">
+                                    <div class="hint" data-position="4">
+                                        <span class="hint-radius"></span>
+                                        <span class="hint-dot">
+                                            <img class="info" src="./icon/Diseño/info.png">
+                                        </span>
+                                        <div class="hint-content do--split-children">
+                                            <p>Este campo se habilitará unicamente si se selecciona la página inicio. Su función es
+                                                identificar que sección dentro del inicio será afectada.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="posicion" name="posicion">
+                                    <option value="0">-- Seleccione --</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group2 col-12">
                             <label>Fuente</label>
                             <div class="select-wrapper">
                                 <select id="fuente" name="fuente">
@@ -493,7 +515,7 @@
                                             <img class="info" src="./icon/Diseño/info.png">
                                         </span>
                                         <div class="hint-content do--split-children">
-                                            <p>Recomendado para fondos animados. Su función es que no se mezcle el fondo
+                                            <p>Recomendado para fondos animados o dinámicos. Su función es que no se mezcle el fondo
                                                 con el texto.
                                                 Al seleccionarlo, si el fondo es de color claro, el texto cambia a un
                                                 color oscuro y
@@ -512,7 +534,7 @@
                         </div>
                     </div>
                     <div class="form-group col-12">
-                        <button class="neu-button2"><img src="./icon/Diseño/icons8-subir2-48.png"
+                        <button class="neu-button2" id="uploadTextStyle"><img src="./icon/Diseño/icons8-subir2-48.png"
                                 alt=" "><span>Subir</span></button>
                     </div>
                 </div>
@@ -599,7 +621,23 @@
         </div>
     </section>
 
+    <!--Toast-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header" style="background-color: #9663e8; color:#ffff">
+                <strong class="me-auto">Información invalida</strong>
+                <!--<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>-->
+            </div>
+            <div class="toast-body">
+                Debe ingresar algún dato valido
+            </div>
+        </div>
+    </div>
+
     <script>
+        const toastLive = document.getElementById('liveToast');
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLive);
+
         const previewCard = document.querySelector('.preview-card');
         const previewImage = document.getElementById('previewImage');
         const previewTitle = document.getElementById('previewTitle');
@@ -642,6 +680,13 @@
                 const wrapper = button.closest('.input-action');
                 const input = wrapper.querySelector('[data-preview]');
                 const value = input.value.trim();
+
+                const requiredFields = ["image", "title", "description","image2", "textoPrueba"];
+
+                if (!value && requiredFields.includes(type)) {
+                    toastBootstrap.show();
+                    return;
+                }
 
                 animatePreview(() => {
                     switch (type) {
@@ -732,7 +777,7 @@
 
         function restoreDefaultTexts() {
             document.querySelectorAll(".preview-text").forEach(el => {
-                if (el.dataset.default && el.dataset.type!=="formulario") {
+                if (el.dataset.default && el.dataset.type !== "formulario") {
                     el.textContent = el.dataset.default;
                 }
             });
@@ -962,6 +1007,7 @@
                 console.warn("Layout no definido");
                 return;
             }
+
             currentLayout = layouts[page];
             restoreDefaultTexts();
             renderSkeleton(layouts[page]);
@@ -1235,9 +1281,9 @@
             grayscaleValue.textContent = 0;
 
             /* estilos */
-            previewBackground.style.background = "#ffffff";
-            previewBackground.style.filter = "none";
-            previewBackground.style.opacity = 1;
+            previewBackgroundEl.style.background = "#ffffff";
+            previewBackgroundEl.style.filter = "none";
+            previewBackgroundEl.style.opacity = 1;
 
             previewImage2.src = "";
             previewImage2.style.display = "none";

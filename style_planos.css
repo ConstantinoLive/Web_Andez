@@ -658,3 +658,9 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =========Toast========= */
+.toast-header{
+    background: #9663e8;
+    color: #ffffff;
+}

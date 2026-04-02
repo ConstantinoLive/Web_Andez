@@ -252,7 +252,9 @@
     <script>
         var map = L.map('map').setView([-38, -63], 4);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
         const distribuidores = [
             { id: "Balcarce54-Centro", name: "Balcarce 54 -Centro-", lat: -32.93518, lng: -60.64981, provincia: "Santa Fe" },

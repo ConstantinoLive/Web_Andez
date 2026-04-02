@@ -729,7 +729,12 @@
     word-wrap: break-word;     
     word-break: break-word;    
     line-height: 1.5;  
-    font-size: 10px;
+
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    font-weight: 600;
 
     padding: 15px 40px;
     opacity: 0;
@@ -795,4 +800,10 @@
     bottom: 95px;
     left: 50%;
     margin-left: 56px;
+}
+
+/* =========Toast========= */
+.toast-header{
+    background: #9663e8;
+    color: #ffffff;
 }

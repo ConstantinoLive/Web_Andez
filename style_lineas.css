@@ -564,3 +564,12 @@
     border-color:#9663e8;
     transform: scale(1.5) translateY(-10%) rotate(225deg);
 }
+
+/* ======= Parrafo de aclaración ====== */
+.informacion{
+    display: block;
+    font-style: italic;
+    font-size: 18px;
+    padding: 60px;
+    text-align: justify;
+}

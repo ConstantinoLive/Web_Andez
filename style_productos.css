@@ -326,7 +326,8 @@
     filter: invert(100%) brightness(300%);
 }*/
 
-.table input[type="checkbox"] {
+.table input[type="checkbox"],
+.table2 input[type="checkbox"] {
     transform: scale(1.2);
     margin-right: 15px;
     cursor: pointer;
@@ -773,3 +774,11 @@
     transform: translateY(0);
 }
 
+/* ======= Parrafo de aclaración ====== */
+.informacion{
+    display: block;
+    font-style: italic;
+    font-size: 18px;
+    padding: 60px;
+    text-align: justify;
+}
