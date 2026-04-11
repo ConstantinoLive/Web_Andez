@@ -680,41 +680,34 @@
 
     <script>
         /*Consulta expandida*/
-        document.querySelectorAll(".arrow").forEach(arrow => {
-
-            arrow.addEventListener("click", function () {
-        
-                const container = this.closest(".consulta-cell") || this.closest(".consulta-cell-card");
-        
-                if (!container) return;
-        
-                const text = container.querySelector(".consulta-text") || container.querySelector(".consulta-text-card");
-        
-                if (!text) return;
-        
-                const isExpanded = container.classList.contains("expanded");
-        
-                if (isExpanded) {
-        
-                    text.style.maxHeight = text.scrollHeight + "px";
-        
-                    requestAnimationFrame(() => {
-                        text.style.maxHeight = "40px"; 
-                    });
-        
-                    setTimeout(() => {
-                        text.style.whiteSpace = "nowrap";
-                        container.classList.remove("expanded");
-                    }, 300);
-        
-                } else {
-        
-                    text.style.whiteSpace = "normal";
-                    text.style.maxHeight = text.scrollHeight + "px";
-        
-                    container.classList.add("expanded");
-                }
-            });
+        document.addEventListener('click', function(e) {
+            if (!e.target.matches('.arrow')) return;
+            
+            const container = e.target.closest('.consulta-cell') || e.target.closest('.consulta-cell-card');
+            console.log('container:', container);
+            
+            if (!container) return;
+            
+            const text = container.querySelector('.consulta-text') || container.querySelector('.consulta-text-card');
+            console.log('text:', text);
+            
+            if (!text) return;
+            
+            container.classList.toggle('expanded');
+            const isExpanded = container.classList.contains('expanded');
+            
+            if (isExpanded) {
+                text.style.whiteSpace = 'normal';
+                text.style.maxHeight = text.scrollHeight + 'px';
+            } else {
+                text.style.maxHeight = text.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    text.style.maxHeight = '40px';
+                });
+                setTimeout(() => {
+                    text.style.whiteSpace = 'nowrap';
+                }, 300);
+            }
         });
     </script>
 

@@ -463,11 +463,9 @@ th.active-filter select {
     max-width: 320px;
     display: inline-block;
     vertical-align: middle;
-
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
     max-height: 40px;
     transition: max-height 0.35s ease, white-space 0.2s ease;
 }
@@ -482,22 +480,22 @@ th.active-filter select {
     transition: max-height 0.35s ease, white-space 0.2s ease;
 }
 
+.consulta-cell.expanded .consulta-text,
 .consulta-cell-card.expanded .consulta-text-card {
     white-space: normal;
     overflow: auto;
-    text-overflow: unset;
     text-align: justify;
-    padding-right: 10px;
-    max-height: 300px;
+    hyphens: auto;
+    padding-right: 5px;
 }
 
-.consulta-cell.expanded .consulta-text {
-    white-space: normal;
-    overflow: auto;
+.consulta-cell.expanded .consulta-text{
+    height: 180px;
     text-overflow: unset;
-    text-align: justify;
-    padding-right: 10px;
-    max-height: 300px;
+}
+.consulta-cell-card.expanded .consulta-text-card {
+    width: 300px;
+    height: 300px;
 }
 
 .arrow {
