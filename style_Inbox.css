@@ -975,7 +975,7 @@ tr[data-prioridad="normal"] {
 
 /* cada columna */
 .kanban>.col {
-    flex: 0 0 300px;
+    flex: 0 0 320px;
     display: flex;
     flex-direction: column;
 }
@@ -1121,26 +1121,6 @@ tr[data-prioridad="normal"] {
     font-size: 1rem;
     font-weight: 700;
 }
-
-/* texto */
-/*.consulta-text-card {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 8px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 100px;
-    text-align: justify;
-}
-
-.card-text.expanded .consulta-text-card {
-    overflow-y: auto;
-    text-overflow: unset;
-    text-align: justify;
-    padding-right: 10px;
-    height: auto; 
-    max-height: 250px;
-}*/
 
 /* mail + icono */
 .card-link {

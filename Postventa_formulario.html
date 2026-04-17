@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postventa | Formulario</title>
+
+    <link rel="stylesheet" href="style_FormPostventa.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Logo ANDEZ negro.png" alt="Andez" width="130rem">
+        <button class="neu-button"><img src="./icon/Diseño/icons8-cerrar-sesión2.png"
+                alt=" "><span>Salir</span></button>
+        <div class="fon_nav_index sidebar-collapsed">
+            <button class="btnlat"><img src="./icon/Diseño/barra-lateral.png"></button>
+            <ul class="menu_index">
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_inbox.html"><img src="./icon/Diseño/inbox.png"
+                                alt=" "><span>Inbox</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/chat2.png"><span>Mensajería</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_formulario.html"><img
+                                src="./icon/Diseño/formulario.png"><span>Formulario</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/reseña.png"><span>Reseñas</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/grafico.png" alt=" "><span>Dashboard</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/tablas.png" alt=" "><span>Tablas</span></a>
+                    </li>
+                </div>
+                <li class="item_lista">
+                    <a href="./Configuracion.html"><img src="./icon/Diseño/configuración.png"
+                            alt=" "><span>Configuración</span></a>
+                </li>
+            </ul>
+            <div class="usuario">
+                <a href="#" class="user"><img src="./icon/Diseño/usuario.png" alt=" ">Fernando: Postventa</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="seccion container ">
+        <h2 class="titulo_seccion">Formulario</h2>
+        <div class="top-bar">
+            <div class="search-card">
+                <div class="search-group">
+                    <label>Busqueda</label>
+                    <div class="search-input">
+                        <div class="select-wrapper">
+                            <select id="num" name="num">
+                                <option value=" ">Número...</option>
+                                <option value="1800">1800</option>
+                                <option value="1799">1799</option>
+                                <option value="1798">1798</option>
+                                <option value="1797">1797</option>
+                                <option value="1796">1796</option>
+                                <option value="1795">1795</option>
+                                <option value="1794">1794</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="nom" name="nom">
+                                <option value=" ">Nombre y Apellido...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="mail" name="mail">
+                                <option value=" ">Mail...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">
+                            <img src="./icon/Diseño/buscar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="ncbz">
+                <div class="caseBox">
+                    <label class="numCase">#1800</label>
+                </div>
+                <h4 class="prev">Información del caso</h4>
+            </div>
+            <div class="row">
+                <div class="form-group col-6">
+                    <label>Nombre y Apellido</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-6">
+                    <label>Mail</label>
+                    <input type="email">
+                </div>
+                <div class="form-group col-3">
+                    <label>Forma de contacto</label>
+                    <div class="select-wrapper">
+                        <select id="fContacto" name="fContacto">
+                            <option value=" ">...</option>
+                            <option value="1">Mail</option>
+                            <option value="2">Web</option>
+                            <option value="3">Teléfono</option>
+                            <option value="4">Distribuidor</option>
+                            <option value="5">Puerta</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label>Fecha contacto</label>
+                    <input type="date">
+                </div>
+                <div class="form-group col-3">
+                    <label>Fecha 1ra respuesta</label>
+                    <input type="date">
+                </div>
+                <div class="form-group col-3">
+                    <label>Motivo de contacto</label>
+                    <div class="select-wrapper">
+                        <select id="mContacto" name="mContacto">
+                            <option value=" ">...</option>
+                            <option value="11">Repuesto en garantia</option>
+                            <option value="21">Falla de fabricación</option>
+                            <option value="31">Faltante</option>
+                            <option value="41">Consulta</option>
+                            <option value="51">Compra de repuesto</option>
+                            <option value="61">Falla de instalación</option>
+                            <option value="71">Disconformidad del cliente</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label>Código de reclamo</label>
+                    <input type="text">
+                </div>
+                <div class="modalArrow col-1">
+                    <button class="codigo" data-bs-toggle="modal" data-bs-target="#ModalCodigo">
+                        <img class="arrow" src="./icon/Diseño/flecha_derecha.png">
+                    </button>
+                </div>
+                <div class="form-group col-12">
+                    <label>Consulta | Problema</label>
+                    <textarea rows="6"></textarea>
+                </div>
+                <div class="form-group col-12">
+                    <label>Respuesta | Solución</label>
+                    <textarea rows="6"></textarea>
+                </div>
+            </div>
+
+            <!--<div class="separador mt-5 mb-3"></div>-->
+
+            <h4 class="prev">Datos de compra</h4>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label>Fecha de compra</label>
+                    <input type="date">
+                </div>
+                <div class="form-group col-8">
+                    <label>Distribuidor</label>
+                    <div class="select-wrapper">
+                        <select id="distri" name="distri">
+                            <option value=" ">...</option>
+                            <option value="1">Blaisten</option>
+                            <option value="2">Fedan</option>
+                            <option value="3">Cerrosud</option>
+                            <option value="4">Casaterra</option>
+                            <option value="5">Formella</option>
+                            <option value="6">Foschia</option>
+                            <option value="7">Cisilotto</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="separador mt-5 mb-3"></div>-->
+
+            <h4 class="prev">Datos del producto</h4>
+            <div class="row">
+                <div class="form-group col-3">
+                    <label>Fecha de OT</label>
+                    <input type="date">
+                </div>
+                <div class="form-group col-3">
+                    <label>Número de OT</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-3">
+                    <label>Línea</label>
+                    <div class="select-wrapper">
+                        <select id="linea" name="linea">
+                            <option value=" ">...</option>
+                            <option value="1">Match</option>
+                            <option value="2">Giraffe</option>
+                            <option value="3">Klub</option>
+                            <option value="4">Ce</option>
+                            <option value="5">Urbana</option>
+                            <option value="6">Gourmet</option>
+                            <option value="7">Wine</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label>Modelo</label>
+                    <div class="select-wrapper">
+                        <select id="modelo" name="modelo">
+                            <option value=" ">...</option>
+                            <option value="1">500.19</option>
+                            <option value="2">600.19</option>
+                            <option value="3">550.19</option>
+                            <option value="4">700.19</option>
+                            <option value="5">620.19</option>
+                            <option value="6">615.19</option>
+                            <option value="7">800.19</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="separador mt-5 mb-3"></div>-->
+
+            <h4 class="prev">Solución</h4>
+            <div class="row">
+                <div class="form-group col-5">
+                    <label>Repuesto</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-1">
+                    <label>Cantidad</label>
+                    <input type="number" min="0" value="0">
+                </div>
+                <div class="form-group col-3">
+                    <label>Tipo de repuesto</label>
+                    <div class="select-wrapper">
+                        <select id="tRepuesto" name="tRepuesto">
+                            <option value=" ">...</option>
+                            <option value="1">Convencional</option>
+                            <option value="2">No convencional</option>
+                            <option value="3">Ninguno</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label>Modo de solución</label>
+                    <div class="select-wrapper">
+                        <select id="mSolucion" name="mSolucion">
+                            <option value=" ">...</option>
+                            <option value="1">Envío a domicilio</option>
+                            <option value="2">Envío a distribuidor</option>
+                            <option value="3">Envío a técnico</option>
+                            <option value="4">Retira en fábrica</option>
+                            <option value="5">Asesoramiento</option>
+                            <option value="6">Servicio técnico</option>
+                            <option value="7">Ninguno</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label>Observaciones</label>
+                    <textarea rows="6"></textarea>
+                </div>
+            </div>
+
+            <!--<div class="separador mt-5 mb-3"></div>-->
+
+            <h4 class="prev">Información de venta y facturación</h4>
+            <div class="row">
+                <div class="form-group col-4">
+                    <label># Tiendanube</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label># Operación ML</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label>Fecha compra ML | Tiendanube</label>
+                    <input type="date">
+                </div>
+                <div class="form-group col-4">
+                    <label>Monto de compra</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label>Número de factura</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label>DNI</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-10">
+                    <label>Domicilio</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-2">
+                    <label>Numeración</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-2">
+                    <label>Piso</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-2">
+                    <label>Dpto | Lote</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-8">
+                    <label>Nombre del barrio</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label>Localidad</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <label>Provincia</label>
+                    <div class="select-wrapper">
+                        <select id="provincia" name="provincia">
+                            <option value=" ">...</option>
+                            <option value="1">Buenos Aires</option>
+                            <option value="2">Capital Federal</option>
+                            <option value="3">Entre Ríos</option>
+                            <option value="4">Santa Fe</option>
+                            <option value="5">Córdoba</option>
+                            <option value="6">San Juan</option>
+                            <option value="7">Mendoza</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-2">
+                    <label>Código Postal</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-2">
+                    <label>Teléfono</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Número de guía de correo</label>
+                    <input type="text">
+                </div>
+                <div class="form-group col-4">
+                    <button class="neu-button2"><img src="./icon/Diseño/Agregar.png" alt=" "><span>Agregar</span></button>
+                </div>
+                <div class="form-group col-4">
+                    <button class="neu-button2"><img src="./icon/Diseño/editar (1).png" alt=" "><span>Editar</span></button>
+                </div>
+                <div class="form-group col-4">
+                    <button class="neu-button2"><img src="./icon/Diseño/cerrarcaso.png" alt=" "><span>Cerrar caso</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal-->
+
+    <div class="modal animate__animated animate__zoomIn" id="ModalCodigo" tabindex="1"
+        aria-labelledby="ModalCodigoeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3" id="ModalCodigoLabel">Código de casos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="code-container">
+                        <div class="section_modal">
+                            <h5>Motivo de contacto</h5>
+                            <div class="list">
+                                <ul>
+                                    <li>11 ~ Repuestos en garantía</li>
+                                    <li>21 ~ Falla de fabricación</li>
+                                    <li>31 ~ Faltante</li>
+                                    <li>41 ~ Consulta</li>
+                                    <li>51 ~ Compra de repuestos</li>
+                                    <li>61 ~ Falla de instalacion</li>
+                                    <li>71 ~ Disconformidad del cliente</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="iconArrow">
+                            <button class="codigo"><img class="arrow" src="./icon/Diseño/flecha_derecha.png"></button>
+                        </div>
+                        <div class="section_modal">
+                            <h5>Pieza afectada</h5>
+                            <div class="list">
+                                <ul>
+                                    <li>11 ~ Repuestos en garantía</li>
+                                    <li>21 ~ Falla de fabricación</li>
+                                    <li>31 ~ Faltante</li>
+                                    <li>41 ~ Consulta</li>
+                                    <li>51 ~ Compra de repuestos</li>
+                                    <li>61 ~ Falla de instalacion</li>
+                                    <li>71 ~ Disconformidad del cliente</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="iconArrow">
+                            <button class="codigo"><img class="arrow" src="./icon/Diseño/flecha_derecha.png"></button>
+                        </div>
+                        <div class="section_modal">
+                            <h5>Detalle del contacto</h5>
+                            <div class="list">
+                                <ul>
+                                    <li>11 ~ Repuestos en garantía</li>
+                                    <li>21 ~ Falla de fabricación</li>
+                                    <li>31 ~ Faltante</li>
+                                    <li>41 ~ Consulta</li>
+                                    <li>51 ~ Compra de repuestos</li>
+                                    <li>61 ~ Falla de instalacion</li>
+                                    <li>71 ~ Disconformidad del cliente</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <label>Código de reclamo</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <button class="neu-button2"><span>Seleccionar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="./Menu_admin.js"></script>
+</body>
+
+</html>
