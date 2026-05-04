@@ -273,7 +273,7 @@
 
 /* ===== Formulario ===== */
 
-.prev{
+.prev {
     font-size: 3rem;
     color: #4d4d4d;
     font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -282,7 +282,7 @@
 }
 
 .form-card {
-position: relative;
+    position: relative;
     background: #ffffff;
     border-radius: 14px;
     padding: 2rem;
@@ -309,23 +309,23 @@ position: relative;
 }
 
 /* Flecha select */
-.form-group select{
+.form-group select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-.select-wrapper{
+.select-wrapper {
     position: relative;
 }
 
-.select-wrapper select{
+.select-wrapper select {
     width: 100%;
-    padding-right: 40px; 
+    padding-right: 40px;
     cursor: pointer;
 }
 
-.select-wrapper::after{
+.select-wrapper::after {
     content: "";
     position: absolute;
     right: 14px;
@@ -339,20 +339,20 @@ position: relative;
     transition: .2s;
 }
 
-.select-wrapper:hover::after{
-    border-color:#9663e8;
+.select-wrapper:hover::after {
+    border-color: #9663e8;
     transform: scale(1.5) translateY(-50%) rotate(45deg);
 }
 
-.select-wrapper:focus-within::after{
-    border-color:#9663e8;
+.select-wrapper:focus-within::after {
+    border-color: #9663e8;
     transform: scale(1.5) translateY(-10%) rotate(225deg);
 }
 
 /* Inputs */
 .form-group input,
 .form-group select,
-.form-group textarea{
+.form-group textarea {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 10px 12px;
@@ -365,10 +365,10 @@ position: relative;
 /* Focus */
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus{
+.form-group textarea:focus {
     outline: none;
     border-color: #bdbdbd;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
 }
 
 .form-group textarea {
@@ -411,7 +411,7 @@ position: relative;
     transition: all 0.2s ease;
 }
 
-.arrow:hover{
+.arrow:hover {
     transform: scale(1.15);
     opacity: 1;
 }
@@ -421,7 +421,7 @@ position: relative;
     background: transparent;
 }
 
-.modalArrow{
+.modalArrow {
     display: flex;
     align-items: center;
 }
@@ -546,7 +546,7 @@ position: relative;
 /* ===== Modal ===== */
 
 .modal-dialog {
-    min-width: 1300px; 
+    min-width: 1300px;
 }
 
 .modal-header {
@@ -609,9 +609,9 @@ position: relative;
     font-weight: 600;
 }
 
-.iconArrow{
+.iconArrow {
     position: relative;
-    top: 40px;    
+    top: 40px;
 }
 
 .modal-footer {

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postventa | Dashboard</title>
+
+    <link rel="stylesheet" href="style_Dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Logo ANDEZ negro.png" alt="Andez" width="130rem">
+        <button class="neu-button"><img src="./icon/Diseño/icons8-cerrar-sesión2.png"
+                alt=" "><span>Salir</span></button>
+        <div class="fon_nav_index sidebar-collapsed">
+            <button class="btnlat"><img src="./icon/Diseño/barra-lateral.png"></button>
+            <ul class="menu_index">
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_inbox.html"><img src="./icon/Diseño/inbox.png"
+                                alt=" "><span>Inbox</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Postventa_mensajeria.html"><img
+                                src="./icon/Diseño/chat2.png"><span>Mensajería</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_formulario.html"><img
+                                src="./icon/Diseño/formulario.png"><span>Formulario</span></a>
+                    </li>
+                    <!--<li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/reseña.png"><span>Reseñas</span></a>
+                    </li>-->
+                    <li class="item_lista">
+                        <a href="./Postventa_dashboard.html"><img src="./icon/Diseño/grafico.png"
+                                alt=" "><span>Dashboard</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/tablas.png" alt=" "><span>Tablas</span></a>
+                    </li>
+                </div>
+                <li class="item_lista">
+                    <a href="./Configuracion.html"><img src="./icon/Diseño/configuración.png"
+                            alt=" "><span>Configuración</span></a>
+                </li>
+            </ul>
+            <div class="usuario">
+                <a href="#" class="user"><img src="./icon/Diseño/usuario.png" alt=" ">Fernando: Postventa</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="seccion container-type">
+        <h2 class="titulo_seccion">Dashboard</h2>
+
+        <div class="grid">
+            <!--Filtros-->
+            <section class="filter">
+                <h4 class="prev">Filtros</h4>
+                <div class="form-card">
+                    <div class="form-group">
+                        <label>Años</label>
+                        <div class="select-wrapper">
+                            <select id="fecha" name="fecha">
+                                <option value=" ">Todos</option>
+                                <option value="1">2017</option>
+                                <option value="2">2018</option>
+                                <option value="3">2019</option>
+                                <option value="4">2020</option>
+                                <option value="5">2021</option>
+                                <option value="6">2022</option>
+                                <option value="7">2023</option>
+                                <option value="8">2024</option>
+                                <option value="9">2025</option>
+                                <option value="10">2026</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="separador"></div>
+
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="TNMes" value="todos" />
+                            <span>Todos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="TNMes" value="ninguno" />
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group2">
+                                <label>Enero</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Febrero</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Marzo</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Abril</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Mayo</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Junio</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group2">
+                                <label>Julio</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Agosto</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Septiembre</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Octubre</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Noviembre</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="form-group2">
+                                <label>Diciembre</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-card">
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="TNTipo" value="todos" />
+                            <span>Todos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="TNTipo" value="ninguno" />
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Repuestos en garantia</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Falla de fabricación</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Faltantes</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Consultas</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Compra de repuestos</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Fallas de instalación</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Disconformidad del cliente</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <div class="form-card">
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="TNLinea" value="todos" />
+                            <span>Todos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="TNLinea" value="ninguno" />
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+                    <ul class="check-list">
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Match</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Giraffe</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Klub</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Jazz</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Black</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Arame</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>UP</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Nice</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Antique</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Next</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Point</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Urbana</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Wine</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Wine Gourmet</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Gourmet</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Edge</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Zara</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>CE</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Flow</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Agarraderas</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Fox</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>New Fox</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Sistema de bidet</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Senior</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span>Cuadratto</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div class="form-card">
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="TNSector" value="todos" />
+                            <span>Todos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="TNSector" value="ninguno" />
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Postventa repuestos</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Mecanizado</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Armado</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Galvanoplastía</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Ingeniería</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Marketing</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Instalador</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="form-group2">
+                        <label>Disconformidad del cliente</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <!--Graficos-->
+            <section class="graphics">
+                <div class="encabezado">
+                    <div class="form-card3">
+                        <label class="tag">Total de casos ingresados</label>
+                        <label class="total">1502<span class="currency">casos</span></label>
+                    </div>
+                    <div class="form-card3" style="border-top: 6px solid #3b8399;">
+                        <label class="tag">Demora primer contacto</label>
+                        <div class="dataTrend">
+                            <label class="total">1.5 <span class="currency">días</span></label>
+                            <div class="trend up">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181" />
+                                </svg>
+                                <span>1.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-card3" style="border-top: 6px solid #3b8399;">
+                        <label class="tag">Demora de resolución</label>
+                        <div class="dataTrend">
+                            <label class="total">7.3 <span class="currency">días</span></label>
+                            <div class="trend down">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                                </svg>
+                                <span>0.9%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-card3" style="border-top: 6px solid #3b8399;">
+                        <label class="tag">Facturación</label>
+                        <label class="total">805.657,23 <span class="currency">$</span></label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="chart-TipoCasos ">
+                        <h6 class="prev2">Motivo de contacto</h6>
+                        <div class="table-wrapper">
+                            <table class="table">
+                                <thead>
+                                    <tr class="titulo_columnas">
+                                        <th>Garantía</th>
+                                        <th>Fallas</th>
+                                        <th>Faltantes</th>
+                                        <th>Consulta</th>
+                                        <th>Compra</th>
+                                        <th>Instalación</th>
+                                        <th>Disconformidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>19</td>
+                                        <td>32</td>
+                                        <td>51</td>
+                                        <td>79</td>
+                                        <td>65</td>
+                                        <td>25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <canvas class="TC" id="TipoCaso"></canvas>
+                    </div>
+                    <div class="chart-top10 ">
+                        <canvas id="TopLineas"></canvas>
+                    </div>
+                    <div class="chart-top10 ">
+                        <canvas id="TopCasos"></canvas>
+                    </div>
+                    <div class="chart-top10 ">
+                        <canvas id="STZona"></canvas>
+                    </div>
+                    <div class="chart-top10 ">
+                        <canvas id="ReclamosXClientes"></canvas>
+                    </div>
+                    <div class="chart-TipoCasos ">
+                        <h6 class="prev2">Cantidad de consultas por sector involucrado</h6>
+                        <canvas id="ConsultasXSector"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="chart-Bar" style="margin-bottom: 20px;">
+                    <h6 class="prev2">Promedio de demora en el primer contacto y resolución del problema</h6>
+                    <canvas id="PromedioDemora"></canvas>
+                </div>
+                <div class="chart-Bar" style="margin-bottom: 60px;">
+                    <h6 class="prev2">Facturación de repuestos</h6>
+                    <canvas id="Facturacion"></canvas>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script src="./Graficos.js"></script>
+    <script src="./Menu_admin.js"></script>
+    <script>
+        function ajustarTamanioFuente() {
+            const totales = document.querySelectorAll('.form-card3 .total');
+            const BASE_FONT = 40;        // Tamaño base en px
+            const MAX_CHARS = 5;          // Cantidad de caracteres antes de reducir
+            const MIN_FONT = 12;          // Tamaño mínimo
+
+            totales.forEach(totalElem => {
+                let numeroTexto = '';
+                for (let node of totalElem.childNodes) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        numeroTexto = node.textContent.trim();
+                        break;
+                    }
+                }
+                if (!numeroTexto) {
+                    numeroTexto = totalElem.cloneNode(true).textContent.trim();
+                    const spanDummy = document.createElement('div');
+                    spanDummy.innerHTML = totalElem.innerHTML;
+                    const spans = spanDummy.querySelectorAll('span');
+                    spans.forEach(span => span.remove());
+                    numeroTexto = spanDummy.textContent.trim();
+                }
+
+                const caracteres = numeroTexto.length;
+                let nuevoSize = BASE_FONT;
+
+                if (caracteres > MAX_CHARS) {
+                    const reduccion = (caracteres - MAX_CHARS) * 2;
+                    nuevoSize = Math.max(MIN_FONT, BASE_FONT - reduccion);
+                }
+
+                totalElem.style.fontSize = nuevoSize + 'px';
+            });
+        }
+
+        function watchForChanges() {
+            const observer = new MutationObserver(() => {
+                ajustarTamanioFuente();
+            });
+            const totales = document.querySelectorAll('.form-card3 .total');
+            totales.forEach(el => {
+                observer.observe(el, { childList: true, subtree: true, characterData: true });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            ajustarTamanioFuente();
+            watchForChanges();
+        });
+        window.addEventListener('load', ajustarTamanioFuente);
+        window.addEventListener('resize', ajustarTamanioFuente); 
+    </script>
+</body>
+
+</html>
