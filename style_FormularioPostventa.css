@@ -509,6 +509,7 @@ ul {
 }
 
 .formPV .inputBox input,
+.formPV .inputBox select,
 .formPV .inputBox textarea {
     width: 100%;
     background: transparent;
@@ -545,9 +546,28 @@ ul {
     color: #bdb8b8;
 }
 
+
+.formPV .inputBox select.has-value + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #bdb8b8;
+}
+
 .formPV .inputBox input:focus,
+.formPV .inputBox select:focus,
 .formPV .inputBox textarea:focus {
     border-bottom-color: #fff;
+}
+
+.formPV .inputBox select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.formPV .inputBox select option {
+    color: #333;
+    background: #fff;
 }
 
 .formPV .inputBox input[type="date"] {
@@ -930,7 +950,7 @@ ul {
     }
 
     .pv {
-        max-width: 60%;
+        max-width: 40%;
         margin: 20px auto;
     }
 
@@ -940,20 +960,21 @@ ul {
 
     /* ARCHIVOS */
     .archivos-row {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 40px;
     }
 
     .file-upload-wrapper {
-        width: 100% !important;
+        width: 50% !important;
         max-width: 500px;
+        height: 30%;
     }
 
     .nota2 {
-        width: 100%;
-        margin: 0;
-        margin-top: 15px;
+        width: 80%;
+        /*margin: 0;*/
+        margin-top: 10px;
         text-align: center;
     }
 

@@ -188,23 +188,31 @@
                         <h2>Datos personales</h2>
                         <div class="inputBox">
                             <input type="text" name="nombre" placeholder=" ">
-                            <label>Nombre y apellido</label>
+                            <label>Nombre y apellido *</label>
                         </div>
                         <div class="inputBox">
                             <input type="email" name="mail" placeholder=" ">
-                            <label>Email</label>
+                            <label>Email *</label>
                         </div>
                         <div class="inputBox">
                             <input type="text" name="telefono" placeholder=" ">
-                            <label>Teléfono</label>
+                            <label>Teléfono *</label>
                         </div>
                         <div class="inputBox">
                             <input type="text" name="localidad" placeholder=" ">
                             <label>Localidad</label>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="provincia" placeholder=" ">
-                            <label>Provincia</label>
+                            <!--<input type="text" name="provincia" placeholder=" ">-->
+                            <select id="prov" name="prov" >
+                                <option value="" disabled selected hidden></option>
+                                <option value=""></option>
+                                <option value="1">Capital Federal</option>
+                                <option value="2">Buenos Aires</option>
+                                <option value="3">Entre Ríos</option>
+                                <option value="4">Santa Fe</option>
+                            </select>
+                            <label>Provincia *</label>
                         </div>
 
 
@@ -218,6 +226,7 @@
                                     caracteristicas técnica
                                     de nuestros productos, comprar repuestos o tu producto presenta alguna falla.
                                 </p>
+                                <p class="nota1"> <b>* Campos obligatorios</b></p>
                             </div>
                         </div>
 
@@ -228,7 +237,15 @@
                     <div class="cardBack">
                         <h2>Información del producto</h2>
                         <div class="inputBox">
-                            <input type="text" name="local" placeholder=" ">
+                            <!--<input type="text" name="local" placeholder=" ">-->
+                            <select id="tipo" name="local" >
+                                <option value="" disabled selected hidden></option>
+                                <option value=""></option>
+                                <option value="1">Blaisten</option>
+                                <option value="2">Fedan</option>
+                                <option value="3">Cerrosud</option>
+                                <option value="4">Foschia</option>
+                            </select>
                             <label>Local donde realizó la compra</label>
                         </div>
                         <div class="inputBox">
@@ -236,7 +253,27 @@
                             <label>Fecha de compra</label>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="modelo" placeholder=" ">
+                            <!--<input type="text" name="linea" placeholder=" ">-->
+                            <select id="linea" name="linea" >
+                                <option value="" disabled selected hidden></option>
+                                <option value=""></option>
+                                <option value="1">Match</option>
+                                <option value="2">Jazz</option>
+                                <option value="3">Klub</option>
+                                <option value="4">Giraffe</option>
+                            </select>
+                            <label>Línea</label>
+                        </div>
+                        <div class="inputBox">
+                            <!--<input type="text" name="modelo" placeholder=" ">-->
+                            <select id="modelo" name="modelo" >
+                                <option value="" disabled selected hidden></option>
+                                <option value=""></option>
+                                <option value="1">500.19</option>
+                                <option value="2">500.20</option>
+                                <option value="3">500.35</option>
+                                <option value="4">500.22</option>
+                            </select>
                             <label>Modelo</label>
                         </div>
                         <div class="inputBox">
@@ -289,6 +326,28 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.querySelectorAll(".formPV select").forEach(select => {
+
+            function actualizarEstado() {
+                if (select.value && select.value !== "") {
+                    select.classList.add("has-value");
+                } else {
+                    select.classList.remove("has-value");
+                }
+            }
+        
+            // estado inicial (clave)
+            actualizarEstado();
+        
+            // cuando cambia
+            select.addEventListener("change", actualizarEstado);
+        
+            // cuando pierde foco sin elegir nada
+            select.addEventListener("blur", actualizarEstado);
+        });
+    </script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);

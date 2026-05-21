@@ -27,7 +27,8 @@
                                 alt=" "><span>Inbox</span></a>
                     </li>
                     <li class="item_lista">
-                        <a href="./Postventa_mensajeria.html"><img src="./icon/Diseño/chat2.png"><span>Mensajería</span></a>
+                        <a href="./Postventa_mensajeria.html"><img
+                                src="./icon/Diseño/chat2.png"><span>Mensajería</span></a>
                     </li>
                 </div>
                 <div class="separador">
@@ -35,11 +36,12 @@
                         <a href="./Postventa_formulario.html"><img
                                 src="./icon/Diseño/formulario.png"><span>Formulario</span></a>
                     </li>
-                    <!--<li class="item_lista">
-                        <a href=""><img src="./icon/Diseño/reseña.png"><span>Reseñas</span></a>
-                    </li>-->
                     <li class="item_lista">
-                        <a href="./Postventa_dashboard.html"><img src="./icon/Diseño/grafico.png" alt=" "><span>Dashboard</span></a>
+                        <a href="./Postventa_casos.html"><img src="./icon/Diseño/buscarLista.png"><span>Casos</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Postventa_dashboard.html"><img src="./icon/Diseño/grafico.png"
+                                alt=" "><span>Dashboard</span></a>
                     </li>
                 </div>
                 <div class="separador">
@@ -103,9 +105,15 @@
                     </div>
                 </div>
             </div>
+            <button class="btn-view">
+                <img class="view" src="./icon/Diseño/nuevoFormulario.png" alt=" ">
+            </button>
         </div>
 
         <div class="form-card">
+            <div class="stateBox">
+                <label class="estado" data-estado="nuevo"></label>
+            </div>
             <div class="ncbz">
                 <div class="caseBox">
                     <label class="numCase">#1800</label>
@@ -143,6 +151,10 @@
                     <input type="date">
                 </div>
                 <div class="form-group col-3">
+                    <label>Fecha de cierre</label>
+                    <input type="date" id="fechaCierre">
+                </div>
+                <div class="form-group col-3">
                     <label>Motivo de contacto</label>
                     <div class="select-wrapper">
                         <select id="mContacto" name="mContacto">
@@ -159,12 +171,27 @@
                 </div>
                 <div class="form-group col-3">
                     <label>Código de reclamo</label>
-                    <input type="text">
+                    <input type="text" readonly>
                 </div>
                 <div class="modalArrow col-1">
-                    <button class="codigo" data-bs-toggle="modal" data-bs-target="#ModalCodigo">
+                    <button class="codigo action-btn" data-bs-toggle="modal" data-bs-target="#ModalCodigo">
                         <img class="arrow" src="./icon/Diseño/flecha_derecha.png">
                     </button>
+                </div>
+                <div class="form-group col-3">
+                    <label>Estado</label>
+                    <div class="select-wrapper">
+                        <select id="estado" name="estado">
+                            <option value="nuevo">...</option>
+                            <option value="abierto">Abierto</option>
+                            <option value="pedido_fabrica">Pedido a fábrica</option>
+                            <option value="espera_cliente">Espera respuesta del cliente</option>
+                            <option value="listo_despacho">Listo para despachar</option>
+                            <option value="espera_info">Espera de información</option>
+                            <option value="cerrado" style="display: none;">Cerrado</option>
+                            <option value="reabierto" style="display: none;">Reabierto</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group col-12">
                     <label>Consulta | Problema</label>
@@ -184,7 +211,7 @@
                     <label>Fecha de compra</label>
                     <input type="date">
                 </div>
-                <div class="form-group col-8">
+                <div class="form-group col-5">
                     <label>Distribuidor</label>
                     <div class="select-wrapper">
                         <select id="distri" name="distri">
@@ -198,6 +225,10 @@
                             <option value="7">Cisilotto</option>
                         </select>
                     </div>
+                </div>
+                <div class="form-group col-3">
+                    <label>Número de factura</label>
+                    <input type="text">
                 </div>
             </div>
 
@@ -368,35 +399,53 @@
                     <label>Número de guía de correo</label>
                     <input type="text">
                 </div>
-                <div class="form-group col-4">
-                    <button class="neu-button2"><img src="./icon/Diseño/Agregar.png" alt=" "><span>Agregar</span></button>
+                <div class="form-group col-12">
+                    <label>Registros</label>
+                    <textarea id="registroCaso" rows="6" readonly style="background: rgb(230, 229, 229);"></textarea>
                 </div>
                 <div class="form-group col-4">
-                    <button class="neu-button2"><img src="./icon/Diseño/editar (1).png" alt=" "><span>Modificar</span></button>
+                    <button id="btnAgregar" class="neu-button2 action-btn"><img src="./icon/Diseño/Agregar.png"
+                            alt=" "><span>Agregar</span></button>
                 </div>
                 <div class="form-group col-4">
-                    <button class="neu-button2"><img src="./icon/Diseño/done.png" alt=" "><span>Cerrar caso</span></button>
+                    <button id="btnModificar" class="neu-button2 action-btn"><img src="./icon/Diseño/editar (1).png"
+                            alt=" "><span>Modificar</span></button>
+                </div>
+                <div class="form-group col-4 estado-actions">
+                    <button id="btnCerrarCaso" class="neu-button2" type="button"><img src="./icon/Diseño/cerrar.png"
+                            alt=" "><span>Cerrar caso</span>
+                    </button>
+                    <button id="btnReabrirCaso" class="neu-button2" type="button"><img src="./icon/Diseño/reabrir.png"
+                            alt=" "><span>Reabrir caso</span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--Modal-->
+    <!--Modal Código-->
 
     <div class="modal animate__animated animate__zoomIn" id="ModalCodigo" tabindex="1"
-        aria-labelledby="ModalCodigoeLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-3" id="ModalCodigoLabel">Código de casos</h1>
+        aria-labelledby="ModalCodigoLabel" aria-hidden="true">
+        <div class="modal-dialog mdialog1">
+            <div class="modal-content mcontent1">
+                <div class="modal-header mheader1">
+                    <h1 class="modal-title mtitle1 fs-3" id="ModalCodigoLabel">Código de casos</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body mbody1">
                     <div class="code-container">
                         <div class="section_modal">
                             <h5>Motivo de contacto</h5>
                             <div class="list">
                                 <ul>
+                                    <li>11 ~ Repuestos en garantía</li>
+                                    <li>21 ~ Falla de fabricación</li>
+                                    <li>31 ~ Faltante</li>
+                                    <li>41 ~ Consulta</li>
+                                    <li>51 ~ Compra de repuestos</li>
+                                    <li>61 ~ Falla de instalacion</li>
+                                    <li>71 ~ Disconformidad del cliente</li>
                                     <li>11 ~ Repuestos en garantía</li>
                                     <li>21 ~ Falla de fabricación</li>
                                     <li>31 ~ Faltante</li>
@@ -443,7 +492,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer mfooter1">
                     <div class="form-group">
                         <label>Código de reclamo</label>
                         <input type="text">
@@ -456,7 +505,137 @@
         </div>
     </div>
 
-    
+    <script>
+
+        /* =========================
+        BITÁCORA
+        ========================= */
+
+        const registroCaso = document.getElementById("registroCaso");
+
+        function agregarRegistro(mensaje) {
+
+            const ahora = new Date();
+
+            const fecha = ahora.toLocaleDateString("es-AR");
+
+            const hora = ahora.toLocaleTimeString("es-AR", {
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+
+            const registro =`[${fecha} ${hora}] ${mensaje}\n`;
+
+            registroCaso.value += registro;
+
+            registroCaso.scrollTop = registroCaso.scrollHeight;
+        }
+
+        /* =========================
+           ESTADOS
+        ========================= */
+
+        const estadosTexto = {
+            nuevo: "",
+            abierto: "Abierto",
+            reabierto: "Reabierto",
+            cerrado: "Cerrado",
+            espera_cliente: "Espera respuesta del cliente",
+            pedido_fabrica: "Pedido a fábrica",
+            espera_info: "Espera de información",
+            listo_despacho: "Listo para despachar"
+        };
+
+        const selectEstado = document.getElementById("estado");
+        const estadoLabel = document.querySelector(".estado");
+        const fechaCierre = document.getElementById("fechaCierre");
+        const btnCerrar = document.getElementById("btnCerrarCaso");
+        const btnReabrir = document.getElementById("btnReabrirCaso");
+        let estadoAnterior = "";
+
+        /* ACTUALIZAR ESTADO */
+
+        function actualizarEstado() {
+            const estado = selectEstado.value;
+
+            estadoLabel.dataset.estado = estado;
+            estadoLabel.textContent =
+                estadosTexto[estado] || "";
+
+            const campos = document.querySelectorAll("input, select, textarea");
+
+            campos.forEach(el => {
+                if (el.id !== "registroCaso") {
+                    el.disabled = (estado === "cerrado");
+                }
+            });
+
+            const botones = document.querySelectorAll(".action-btn, .codigo");
+
+            botones.forEach(btn => {
+                btn.disabled =(estado === "cerrado");
+                btn.classList.toggle(
+                    "disabled-btn",
+                    estado === "cerrado"
+                );
+            });
+
+            /* fecha cierre */
+            if (estado === "cerrado") {
+                if (!fechaCierre.value) {
+                    const hoy = new Date().toISOString().split("T")[0];
+                    fechaCierre.value = hoy;
+                }
+                btnCerrar.style.display = "none";
+                btnReabrir.style.display = "flex";
+            }
+            else {
+                fechaCierre.value = "";
+                btnCerrar.style.display = "flex";
+                btnReabrir.style.display = "none";
+            }
+
+            if (estado !== estadoAnterior && estado!=="nuevo") {
+                agregarRegistro(`Estado actualizado a: ${estadosTexto[estado]}`);
+                estadoAnterior = estado;
+            }
+        }
+
+        selectEstado.addEventListener("change", actualizarEstado);
+
+        /* CERRAR CASO */
+
+        btnCerrar.addEventListener("click", () => {
+            selectEstado.value = "cerrado";
+            actualizarEstado();
+        });
+
+        /* REABRIR CASO */
+
+        btnReabrir.addEventListener("click", () => {
+            selectEstado.value = "reabierto";
+            actualizarEstado();
+        });
+
+        /* BOTÓN AGREGAR */
+        document.getElementById("btnAgregar")
+            .addEventListener("click", () => {
+                agregarRegistro("Se da de alta el caso");
+            });
+
+        /* =========================
+           BOTÓN MODIFICAR
+        ========================= */
+        document.getElementById("btnModificar")
+            .addEventListener("click", () => {
+                agregarRegistro("Se modificó información del caso");
+            });
+
+        /* =========================
+           INIT
+        ========================= */
+        actualizarEstado();
+    </script>
 
     <script src="./Menu_admin.js"></script>
 </body>

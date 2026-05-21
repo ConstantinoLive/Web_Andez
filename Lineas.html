@@ -402,10 +402,9 @@
                         <div class="select-wrapper">
                             <select id="tipo" name="tipo">
                                 <option value=" ">Seleccione...</option>
-                                <option value="bi">Grifería bimando</option>
-                                <option value="mono">Grifería monocomando</option>
-                                <option value="acc">Accesorio</option>
-                                <option value="coc">Cocina</option>
+                                <option value="bi">Griferías para baño</option>
+                                <option value="mono">Griferías para cocina</option>
+                                <option value="acc">Accesorios</option>
                                 <option value="duc">Ducha</option>
                             </select>
                         </div>
@@ -432,7 +431,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Grifería bimando</td>
+                                <td>Griferías para baño</td>
                                 <td>
                                     <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
                                             class="tooltip">Editar</span></button>
@@ -441,7 +440,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Grifería monocomando</td>
+                                <td>Griferías para cocina</td>
                                 <td>
                                     <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
                                             class="tooltip">Editar</span></button>
@@ -450,7 +449,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Accesorio</td>
+                                <td>Accesorios</td>
                                 <td>
                                     <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
                                             class="tooltip">Editar</span></button>
@@ -459,16 +458,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Cocina</td>
-                                <td>
-                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
-                                            class="tooltip">Editar</span></button>
-                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
-                                            class="tooltip">Eliminar</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Ducha</td>
+                                <td>Duchas</td>
                                 <td>
                                     <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
                                             class="tooltip">Editar</span></button>
@@ -486,6 +476,170 @@
                 <div class="form-card row">
                     <div class="form-group col-12">
                         <label>Tipo</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group col-6">
+                        <button class="neu-button2" data-bs-toggle="modal" data-bs-target="#AgregarPais"><img
+                                src="./icon/Diseño/Agregar.png" alt=" "><span>Agregar</span></button>
+                    </div>
+                    <div class="form-group col-6">
+                        <button class="neu-button2"><img src="./icon/Diseño/editar (1).png"
+                                alt=" "><span>Editar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="informacion">En este sector podrá dar de alta un tipo de producto, modificar un tipo ya existente o eliminarlo. Tenga presente que la 
+            eliminación no es definitiva. Podrá visualizarlo en el apartado <b>"Ver eliminados"</b> y en caso de desearlo, podrá darlo de 
+            alta nuevamente.
+        La modificación en este sector, impactará en el menú de la web. </p>
+    </section>
+
+    <div class="separador"></div>
+
+    <section class="seccion container">
+        <h2 class="titulo_seccion">Subtipo de producto</h2>
+        <div class="top-bar">
+            <div class="search-card">
+                <div class="search-group">
+                    <label>Filtro</label>
+                    <div class="search-input">
+                        <div class="select-wrapper">
+                            <select id="subtipo" name="subtipo">
+                                <option value=" ">Seleccione...</option>
+                                <option value="bi">Bimando</option>
+                                <option value="mono">Monocomando</option>
+                                <option value="acc">Accesorio</option>
+                                <option value="coc">Agarradera</option>
+                                <option value="duc">Flor de ducha</option>
+                                <option value="duc">Smart Shower</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">
+                            <img src="./icon/Diseño/buscar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="neu-button2">
+                <img src="./icon/Diseño/eliminar-archivo.png" alt=" ">
+                <span>Ver eliminados</span>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                            <tr class="titulo_columnas">
+                                <th>Tipo de producto</th>
+                                <th>Subtipo de producto</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Griferías para baño</td>
+                                <td>Bimando</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Griferías para baño</td>
+                                <td>Monocomando</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Griferías para cocina</td>
+                                <td>Bimando</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Griferías para cocina</td>
+                                <td>Monocomando</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accesorios</td>
+                                <td>Accesorio</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accesorios</td>
+                                <td>Agarradera</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Duchas</td>
+                                <td>Flor de ducha</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Duchas</td>
+                                <td>Smart Shower</td>
+                                <td>
+                                    <button class="edel"><img src="./icon/Diseño/IconModificarG.png" alt=" "><span
+                                            class="tooltip">Editar</span></button>
+                                    <button class="edel"><img src="./icon/Diseño/IconBasuraG.png" alt=" "><span
+                                            class="tooltip">Eliminar</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col">
+                <h4 class="prev">Editar</h4>
+                <div class="form-card row">
+                    <div class="form-group col-12">
+                        <label>Tipo</label>
+                        <div class="select-wrapper">
+                            <select id="tipo" name="tipo">
+                                <option value="0">Seleccione...</option>
+                                <option value="1">Griferías para baño</option>
+                                <option value="2">Griferías para cocina</option>
+                                <option value="3">Accesorios</option>
+                                <option value="4">Duchas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Subtipo</label>
                         <input type="text">
                     </div>
                     <div class="form-group col-6">

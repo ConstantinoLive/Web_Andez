@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postventa | Casos</title>
+
+    <link rel="stylesheet" href="style_Casos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./img/Logo ANDEZ negro.png" alt="Andez" width="130rem">
+        <button class="neu-button"><img src="./icon/Diseño/icons8-cerrar-sesión2.png"
+                alt=" "><span>Salir</span></button>
+        <div class="fon_nav_index sidebar-collapsed">
+            <button class="btnlat"><img src="./icon/Diseño/barra-lateral.png"></button>
+            <ul class="menu_index">
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_inbox.html"><img src="./icon/Diseño/inbox.png"
+                                alt=" "><span>Inbox</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Postventa_mensajeria.html"><img
+                                src="./icon/Diseño/chat2.png"><span>Mensajería</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href="./Postventa_formulario.html"><img
+                                src="./icon/Diseño/formulario.png"><span>Formulario</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Postventa_casos.html"><img src="./icon/Diseño/buscarLista.png"><span>Casos</span></a>
+                    </li>
+                    <li class="item_lista">
+                        <a href="./Postventa_dashboard.html"><img src="./icon/Diseño/grafico.png"
+                                alt=" "><span>Dashboard</span></a>
+                    </li>
+                </div>
+                <div class="separador">
+                    <li class="item_lista">
+                        <a href=""><img src="./icon/Diseño/tablas.png" alt=" "><span>Tablas</span></a>
+                    </li>
+                </div>
+                <li class="item_lista">
+                    <a href="./Configuracion.html"><img src="./icon/Diseño/configuración.png"
+                            alt=" "><span>Configuración</span></a>
+                </li>
+            </ul>
+            <div class="usuario">
+                <a href="#" class="user"><img src="./icon/Diseño/usuario.png" alt=" ">Fernando: Postventa</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="titulo_seccion">Casos</h2>
+        <div class="top-bar">
+            <div class="search-card">
+                <div class="search-group">
+                    <label>Busqueda</label>
+                    <div class="search-input">
+                        <div class="select-wrapper">
+                            <select id="num" name="num">
+                                <option value=" ">Número...</option>
+                                <option value="1800">1800</option>
+                                <option value="1799">1799</option>
+                                <option value="1798">1798</option>
+                                <option value="1797">1797</option>
+                                <option value="1796">1796</option>
+                                <option value="1795">1795</option>
+                                <option value="1794">1794</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="nom" name="nom">
+                                <option value=" ">Nombre y Apellido...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="mail" name="mail">
+                                <option value=" ">Mail...</option>
+                                <option value="500">500</option>
+                                <option value="550">550</option>
+                                <option value="600">600</option>
+                                <option value="610">610</option>
+                                <option value="700">700</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">
+                            <img src="./icon/Diseño/buscar.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-view" data-bs-toggle="modal" data-bs-target="#Modalcolumnas">
+                <img class="view" src="./icon/Diseño/columnas.png" alt=" ">
+            </button>
+            <button class="btn-view" data-bs-toggle="modal" data-bs-target="#Modalfiltro">
+                <img class="view" src="./icon/Diseño/filtroAjuste.png" alt=" ">
+            </button>
+            <button id="btnExcel" class="btn-view" type="button">
+                <img class="view" src="./icon/Diseño/excel.png" alt=" ">
+            </button>
+            <button class="btn-view" id="btnImprimir" type="button">
+                <img class="view" src="./icon/Diseño/impresora.png" alt=" ">
+            </button>
+        </div>
+
+    </div>
+
+    <section class="seccion container-type mt-3">
+        <div class="table-container">
+            <div class="delete-filter">
+                <label>Borrar filtros</label>
+                <input type="checkbox" id="deleteFilter">
+            </div>
+            <div class="table-wrapper" id="Table">
+                <table class="table">
+                    <thead>
+                        <tr class="titulo_columnas">
+                            <th data-sort="0" data-column="reclamo">
+                                <div class="th-content">
+                                    <span># Reclamo</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="0">
+                            </th>
+                            <th data-sort="1" data-column="nombre">
+                                <div class="th-content">
+                                    <span>Nombre y Apellido</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="1">
+                            </th>
+                            <th data-sort="2" data-column="mail">
+                                <div class="th-content">
+                                    <span>Mail</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="2">
+                            </th>
+                            <th data-sort="3" data-type="date" data-column="ingreso">
+                                <div class="th-content">
+                                    <span>Ingreso</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="3">
+                            </th>
+                            <th data-sort="4" data-type="date" data-column="primer_contacto">
+                                <div class="th-content">
+                                    <span>1er Contacto</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="4">
+                            </th>
+                            <th data-sort="5" data-column="forma_contacto">
+                                <div class="th-content">
+                                    <span>Forma de contacto</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="5">
+                                    <option value="">Todos</option>
+                                    <option value="Mail">Mail</option>
+                                    <option value="Web">Web</option>
+                                    <option value="Ditribuidor">Ditribuidor</option>
+                                    <option value="Puerta">Puerta</option>
+                                    <option value="Teléfonor">Teléfono</option>
+                                </select>
+                            </th>
+                            <th data-sort="6" data-column="motivo_contacto">
+                                <div class="th-content">
+                                    <span>Motivo de contacto</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="6">
+                                    <option value="">Todos</option>
+                                    <option value="11">Repuesto en garantía</option>
+                                    <option value="21">Falla de fabricación</option>
+                                    <option value="31">Faltante</option>
+                                    <option value="41">Consulta</option>
+                                    <option value="51">Compra de repuesto</option>
+                                    <option value="61">Falla de instalación</option>
+                                    <option value="71">Disconformidad del cliente</option>
+                                </select>
+                            </th>
+                            <th data-sort="7" data-column="consulta">
+                                <div class="th-content">
+                                    <span>Consulta</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="7">
+                            </th>
+                            <th data-sort="8" data-column="respuesta">
+                                <div class="th-content">
+                                    <span>Respuesta</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="8">
+                            </th>
+                            <th data-sort="9" data-column="codigo_reclamo">
+                                <div class="th-content">
+                                    <span>Código de reclamo</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="9">
+                                    <option value="">Todos</option>
+                                    <option value="1">21.0054.065</option>
+                                    <option value="2">21.0014.001</option>
+                                    <option value="3">31.0058.025</option>
+                                    <option value="4">31.0010.010</option>
+                                    <option value="5">31.0068.001</option>
+                                    <option value="6">41.0068.000</option>
+                                    <option value="7">51.0069.005</option>
+                                </select>
+                            </th>
+                            <th data-sort="10" data-column="descripcion_codigo">
+                                <div class="th-content">
+                                    <span>Descripción código</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="10">
+                            </th>
+                            <th data-sort="11" data-type="date" data-column="fecha_compra">
+                                <div class="th-content">
+                                    <span>Fecha de compra</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="11">
+                            </th>
+                            <th data-sort="12" data-column="distribuidor">
+                                <div class="th-content">
+                                    <span>Distribuidor</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="12">
+                                    <option value="">Todos</option>
+                                    <option value="1">Fedan</option>
+                                    <option value="2">Ceramisur</option>
+                                    <option value="3">Blaisten</option>
+                                    <option value="4">Foschia</option>
+                                    <option value="5">Nueva Casa</option>
+                                    <option value="6">Bercovich</option>
+                                    <option value="7">VS Deco</option>
+                                </select>
+                            </th>
+                            <th data-sort="13" data-column="factura">
+                                <div class="th-content">
+                                    <span># Factura</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="13">
+                            </th>
+                            <th data-sort="14" data-type="date" data-column="fecha_ot">
+                                <div class="th-content">
+                                    <span>Fecha de OT</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="14">
+                            </th>
+                            <th data-sort="15" data-column="ot">
+                                <div class="th-content">
+                                    <span># OT</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="15">
+                            </th>
+                            <th data-sort="16" data-column="lineas">
+                                <div class="th-content">
+                                    <span>Líneas</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="16">
+                                    <option value="">Todos</option>
+                                    <option value="1">Match</option>
+                                    <option value="2">Giraffe</option>
+                                    <option value="3">Klub</option>
+                                    <option value="4">Next</option>
+                                    <option value="5">Urbana</option>
+                                    <option value="6">Gourmet</option>
+                                    <option value="7">Edge</option>
+                                </select>
+                            </th>
+                            <th data-sort="17" data-column="modelo">
+                                <div class="th-content">
+                                    <span>Modelo</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="17">
+                                    <option value="">Todos</option>
+                                    <option value="1">500.19</option>
+                                    <option value="2">700.19</option>
+                                    <option value="3">600.19</option>
+                                    <option value="4">500.22</option>
+                                    <option value="5">700.22</option>
+                                    <option value="6">600.22</option>
+                                    <option value="7">500.35</option>
+                                </select>
+                            </th>
+                            <th data-sort="18" data-column="repuesto">
+                                <div class="th-content">
+                                    <span>Repuesto</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="18">
+                            </th>
+                            <th data-sort="19" data-column="cantidad">
+                                <div class="th-content">
+                                    <span>Cantidad</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="19">
+                            </th>
+                            <th data-sort="20" data-column="tipo_repuesto">
+                                <div class="th-content">
+                                    <span>Tipo de repuesto</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="20">
+                                    <option value="">Todos</option>
+                                    <option value="1">Convencional</option>
+                                    <option value="2">No convencional</option>
+                                </select>
+                            </th>
+                            <th data-sort="21" data-column="modo_solucion">
+                                <div class="th-content">
+                                    <span>Modo de solución</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="21">
+                                    <option value="">Todos</option>
+                                    <option value="1">Envío a domicilio</option>
+                                    <option value="2">Envío a distribuidor</option>
+                                    <option value="3">Envío a técnico</option>
+                                    <option value="4">Servicio técnico</option>
+                                    <option value="5">Retira en fábrica</option>
+                                    <option value="6">Asesoramiento</option>
+                                </select>
+                            </th>
+                            <th data-sort="22" data-column="observaciones">
+                                <div class="th-content">
+                                    <span>Observaciones</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="22">
+                            </th>
+                            <th data-sort="23" data-column="tiendanube">
+                                <div class="th-content">
+                                    <span># Tiendanube</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="23">
+                            </th>
+                            <th data-sort="24" data-column="ml">
+                                <div class="th-content">
+                                    <span># Operación ML</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="24">
+                            </th>
+                            <th data-sort="25" data-type="date" data-column="fecha_ml_tn">
+                                <div class="th-content">
+                                    <span>Fecha compra ML TN</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="25">
+                            </th>
+                            <th data-sort="26" data-column="monto_compra">
+                                <div class="th-content">
+                                    <span>Monto de compra</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="26">
+                            </th>
+                            <th data-sort="27" data-column="factura_respuesto">
+                                <div class="th-content">
+                                    <span># Factura</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="27">
+                            </th>
+                            <th data-sort="28" data-column="dni">
+                                <div class="th-content">
+                                    <span>D.N.I.</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="28">
+                            </th>
+                            <th data-sort="29" data-column="domicilio">
+                                <div class="th-content">
+                                    <span>Domicilio</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="29">
+                            </th>
+                            <th data-sort="30" data-column="numeracion">
+                                <div class="th-content">
+                                    <span>Numeracíon</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="30">
+                            </th>
+                            <th data-sort="31" data-column="piso">
+                                <div class="th-content">
+                                    <span>Piso</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="31">
+                            </th>
+                            <th data-sort="32" data-column="dpto">
+                                <div class="th-content">
+                                    <span>Dpto | Lote</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="32">
+                            </th>
+                            <th data-sort="33" data-column="nombre_barrio">
+                                <div class="th-content">
+                                    <span>Nombre barrio</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="33">
+                            </th>
+                            <th data-sort="34" data-column="localidad">
+                                <div class="th-content">
+                                    <span>Localidad</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="34">
+                            </th>
+                            <th data-sort="35" data-column="provincia">
+                                <div class="th-content">
+                                    <span>Provincia</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <select data-filter="35">
+                                    <option value="">Todos</option>
+                                    <option value="1">Capital Federal</option>
+                                    <option value="2">Buenos Aires</option>
+                                    <option value="3">Córdoba</option>
+                                    <option value="4">Santa Fe</option>
+                                    <option value="5">Mendoza</option>
+                                    <option value="6">Neuquén</option>
+                                </select>
+                            </th>
+                            <th data-sort="36" data-column="cp">
+                                <div class="th-content">
+                                    <span>Código Postal</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="36">
+                            </th>
+                            <th data-sort="37" data-column="telefono">
+                                <div class="th-content">
+                                    <span>Teléfono</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="37">
+                            </th>
+                            <th data-sort="38" data-column="guia_correo">
+                                <div class="th-content">
+                                    <span>Guía Correo</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <input type="text" data-filter="38">
+                            </th>
+                            <th data-sort="39" data-column="estado">
+                                <div class="th-content">
+                                    <span>Estado</span>
+                                    <button class="sort-btn">
+                                        ▲
+                                    </button>
+                                    <button class="filtro">
+                                        <img src="./icon/Diseño/filtro.png">
+                                    </button>
+                                </div>
+                                <!--<input type="text" data-filter="5">-->
+                                <select data-filter="39">
+                                    <option value="">Todos</option>
+                                    <option value="Abierto">Abierto</option>
+                                    <option value="Espera respuesta del cliente">Espera cliente</option>
+                                    <option value="Espera de información">Espera información</option>
+                                    <option value="Pedido a fábrica">Pedido a fábrica</option>
+                                    <option value="Listo para despachar">Listo despacho</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1799</a></td>
+                            <td data-column="nombre">Jose Perez</td>
+                            <td data-column="mail"><a class="mail" href="">jose@gmail.com</a></td>
+                            <td data-column="ingreso">18/05/2026</td>
+                            <td data-column="primer_contacto">19/05/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de instalación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Pedido a fábrica</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1798</a></td>
+                            <td data-column="nombre">Maria Fernandez</td>
+                            <td data-column="mail"><a class="mail" href="">maria@gmail.com</a></td>
+                            <td data-column="ingreso">11/05/2026</td>
+                            <td data-column="primer_contacto">11/05/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de instalación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Espera respuesta del cliente</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1797</a></td>
+                            <td data-column="nombre">Juan Guzman</td>
+                            <td data-column="mail"><a class="mail" href="">juan@gmail.com</a></td>
+                            <td data-column="ingreso">16/06/2026</td>
+                            <td data-column="primer_contacto">16/06/2026</td>
+                            <td data-column="forma_contacto">Telefono</td>
+                            <td data-column="motivo_contacto">Falla de instalación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">55558888</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Espera respuesta del cliente</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1796</a></td>
+                            <td data-column="nombre">Maria Fernandez</td>
+                            <td data-column="mail"><a class="mail" href="">maria@gmail.com</a></td>
+                            <td data-column="ingreso">16/06/2026</td>
+                            <td data-column="primer_contacto">16/06/2026</td>
+                            <td data-column="forma_contacto">mail</td>
+                            <td data-column="motivo_contacto">Faltante</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">55553333</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Listo para despachar</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1795</a></td>
+                            <td data-column="nombre">Pedro Fernandez</td>
+                            <td data-column="mail"><a class="mail" href="">pedro@gmail.com</a></td>
+                            <td data-column="ingreso">20/05/2026</td>
+                            <td data-column="primer_contacto">21/05/2026</td>
+                            <td data-column="forma_contacto">mail</td>
+                            <td data-column="motivo_contacto">Falla de instalación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">55553333</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Listo para despachar</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1794</a></td>
+                            <td data-column="nombre">Maria Perales</td>
+                            <td data-column="mail"><a class="mail" href="">maria@gmail.com</a></td>
+                            <td data-column="ingreso">21/05/2026</td>
+                            <td data-column="primer_contacto">21/05/2026</td>
+                            <td data-column="forma_contacto">mail</td>
+                            <td data-column="motivo_contacto">Falla de instalación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">55553333</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                        <tr>
+                            <td data-column="reclamo"><a class="claim" href="">#1800</a></td>
+                            <td data-column="nombre">Stella Gomez</td>
+                            <td data-column="mail"><a class="mail" href="">stella@gmail.com</a></td>
+                            <td data-column="ingreso">10/07/2026</td>
+                            <td data-column="primer_contacto">10/07/2026</td>
+                            <td data-column="forma_contacto">Web</td>
+                            <td data-column="motivo_contacto">Falla de fabricación</td>
+                            <td data-column="consulta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="respuesta" class="consulta-cell">
+                                <p class="consulta-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p><img class="arrow"
+                                    src="./icon/Diseño/down.png">
+                            </td>
+                            <td data-column="codigo_reclamo">21.0058.010</td>
+                            <td data-column="descripcion_codigo">No entra fijador en el accesorio</td>
+                            <td data-column="fecha_compra">03/12/2024</td>
+                            <td data-column="distribuidor">Fedan</td>
+                            <td data-column="factura">100058884</td>
+                            <td data-column="fecha_ot">NULL</td>
+                            <td data-column="ot">NULL</td>
+                            <td data-column="lineas">Match</td>
+                            <td data-column="modelo">202.19</td>
+                            <td data-column="repuesto">Barral corto</td>
+                            <td data-column="cantidad">1</td>
+                            <td data-column="tipo_repuesto">No convencional</td>
+                            <td data-column="modo_solucion">Retira en fábrica</td>
+                            <td data-column="observaciones">NULL</td>
+                            <td data-column="tiendanube">NULL</td>
+                            <td data-column="ml">NULL</td>
+                            <td data-column="fecha_ml_tn">NULL</td>
+                            <td data-column="monto_compra">NULL</td>
+                            <td data-column="factura_respuesto">NULL</td>
+                            <td data-column="dni">NULL</td>
+                            <td data-column="domicilio">NULL</td>
+                            <td data-column="numeracion">NULL</td>
+                            <td data-column="piso">NULL</td>
+                            <td data-column="dpto">NULL</td>
+                            <td data-column="nombre_barrio">NULL</td>
+                            <td data-column="localidad">NULL</td>
+                            <td data-column="provincia">NULL</td>
+                            <td data-column="cp">NULL</td>
+                            <td data-column="telefono">NULL</td>
+                            <td data-column="guia_correo">NULL</td>
+                            <td data-column="estado">Abierto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <div class="total-count"><span id="total-rows-count">0</span>Casos</div>
+                <div class="pagination-controls">
+                    <label for="lines-page">Filas</label>
+                    <input type="number" min="1" value="10" class="page-select" id="lines-page">
+                    <div class="page-nav" id="pagination-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal filtro-->
+
+    <div class="modal animate__animated animate__slideInRight modal-right" id="Modalfiltro" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable mdialog2">
+            <div class="modal-content mcontent2">
+                <div class="modal-header mheader2">
+                    <h1 class="modal-title mtitle2 fs-3">Filtros de búsqueda</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mbody2">
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="EstadoCasos" value="cerrados" />
+                            <span>Cerrados</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="EstadoCasos" value="abiertos" checked />
+                            <span>Abiertos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="EstadoCasos" value="ambos" />
+                            <span>Ambos</span>
+                        </label>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="form-group">
+                        <label>Fecha de ingreso</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de 1er contacto</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Motivo de contacto</label>
+                        <div class="select-wrapper">
+                            <select id="mContacto" name="mContacto">
+                                <option value=" ">...</option>
+                                <option value="11">Repuesto en garantia</option>
+                                <option value="21">Falla de fabricación</option>
+                                <option value="31">Faltante</option>
+                                <option value="41">Consulta</option>
+                                <option value="51">Compra de repuesto</option>
+                                <option value="61">Falla de instalación</option>
+                                <option value="71">Disconformidad del cliente</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Código de reclamo</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción del código</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de compra</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Distribuidor</label>
+                        <div class="select-wrapper">
+                            <select id="mDistri" name="mDistri">
+                                <option value=" ">...</option>
+                                <option value="1">Blaisten</option>
+                                <option value="2">Fedan</option>
+                                <option value="3">Cisilotto</option>
+                                <option value="4">Nueva Casa</option>
+                                <option value="5">Foschia</option>
+                                <option value="6">Ceramisur</option>
+                                <option value="7">Cerrosud</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label># Factura</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de OT</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label># OT</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Líneas</label>
+                        <div class="select-wrapper">
+                            <select id="mLineas" name="mLineas">
+                                <option value=" ">...</option>
+                                <option value="1">Match</option>
+                                <option value="2">Giraffe</option>
+                                <option value="3">Jazz</option>
+                                <option value="4">Next</option>
+                                <option value="5">Up</option>
+                                <option value="6">Urbana</option>
+                                <option value="7">Gourmet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Modelos</label>
+                        <div class="select-wrapper">
+                            <select id="mModelos" name="mModelos">
+                                <option value=" ">...</option>
+                                <option value="1">500.19</option>
+                                <option value="2">500.22</option>
+                                <option value="3">500.20</option>
+                                <option value="4">500.37</option>
+                                <option value="5">500.27</option>
+                                <option value="6">400.53</option>
+                                <option value="7">400.52</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Modo de solución</label>
+                        <div class="select-wrapper">
+                            <select id="mSolucion" name="mSolucion">
+                                <option value=" ">...</option>
+                                <option value="1">Retira en fábrica</option>
+                                <option value="2">Envío a domicilio</option>
+                                <option value="3">Envío a distribuidor</option>
+                                <option value="4">Servicio técnico</option>
+                                <option value="5">Envío a técnico</option>
+                                <option value="6">Asesoramiento</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label># Tiendanube</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label># Operación ML</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de compra ML TN</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>Monto de compra</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label># Factura</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>D.N.I.</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Domicilio</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Numeración</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Piso</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Dpto | Lote</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre Barrio</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Localidad</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Provincia</label>
+                        <div class="select-wrapper">
+                            <select id="mProv" name="mProv">
+                                <option value=" ">...</option>
+                                <option value="1">Buenos Aires</option>
+                                <option value="2">Capital Federal</option>
+                                <option value="3">Santa Fe</option>
+                                <option value="4">Entre Ríos</option>
+                                <option value="5">Tucuman</option>
+                                <option value="6">Misiones</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Código Postal</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Guía Correo</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <div class="select-wrapper">
+                            <select id="mProv" name="mProv">
+                                <option value=" ">...</option>
+                                <option value="1">Abierto</option>
+                                <option value="2">Cerrado</option>
+                                <option value="3">Pedido a fábrica</option>
+                                <option value="4">Listo para despachar</option>
+                                <option value="5">Espera de información</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer mfooter2">
+                    <div class="form-group">
+                        <button class="neu-button2"><span>Buscar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal columnas-->
+
+    <div class="modal animate__animated animate__slideInRight modal-right" id="Modalcolumnas" tabindex="-1">
+        <div class="modal-dialog mdialog2">
+            <div class="modal-content mcontent2">
+                <div class="modal-header mheader2">
+                    <h1 class="modal-title mtitle2 fs-3">Edición de columnas</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mbody2">
+                    <div class="radio-input">
+                        <label>
+                            <input type="radio" name="TNLinea" value="todos" />
+                            <span>Todos</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="TNLinea" value="ninguno" />
+                            <span>Ninguno</span>
+                        </label>
+                    </div>
+                    <ul class="check-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" value="reclamo">
+                                <span># Reclamo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="nombre">
+                                <span>Nombre y apellido</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="mail">
+                                <span>Mail</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="ingreso">
+                                <span>Ingreso</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="primer_contacto">
+                                <span>1er contacto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="forma_contacto">
+                                <span>Forma de contacto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="motivo_contacto">
+                                <span>Motivo de contacto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="consulta">
+                                <span>Consulta</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="respuesta">
+                                <span>Respuesta</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="codigo_reclamo">
+                                <span>Código de reclamo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="descripcion_codigo">
+                                <span>Descripción código</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="fecha_compra">
+                                <span>Fecha de compra</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="distribuidor">
+                                <span>Distribuidor</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="factura">
+                                <span># Factura</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="fecha_ot">
+                                <span>Fecha de OT</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="ot">
+                                <span># OT</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="lineas">
+                                <span>Líneas</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="modelo">
+                                <span>Modelo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="repuesto">
+                                <span>Respuesto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="cantidad">
+                                <span>Cantidad</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="tipo_repuesto">
+                                <span>Tipo de respuesto</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="modo_solucion">
+                                <span>Modo de solución</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="observaciones">
+                                <span>Observaciones</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="tiendanube">
+                                <span># Tiendanube</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="ml">
+                                <span># Operación ML</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="fecha_ml_tn">
+                                <span>Fecha compra ML TN</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="monto_compra">
+                                <span>Monto de compra</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="factura_respuesto">
+                                <span># Factura</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="dni">
+                                <span>D.N.I.</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="domicilio">
+                                <span>Domicilio</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="numeracion">
+                                <span>Numeración</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="piso">
+                                <span>Piso</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="dpto">
+                                <span>Dpto | Lote</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="nombre_barrio">
+                                <span>Nombre barrio</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="localidad">
+                                <span>Localidad</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="provincia">
+                                <span>Provincia</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="cp">
+                                <span>Código postal</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="telefono">
+                                <span>Teléfono</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="guia_correo">
+                                <span>Guía correo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" value="estado">
+                                <span>Estado</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer mfooter2">
+                    <div class="form-group">
+                        <button class="neu-button2" id="btnMostrarColumnas"><span>Mostrar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Menu_admin.js"></script>
+    <script src="./FiltroOrdenTabla.js"></script>
+    <script>
+        /*Consulta expandida*/
+        document.addEventListener('click', function (e) {
+            if (!e.target.matches('.arrow')) return;
+
+            const container = e.target.closest('.consulta-cell') || e.target.closest('.consulta-cell-card');
+            console.log('container:', container);
+
+            if (!container) return;
+
+            const text = container.querySelector('.consulta-text') || container.querySelector('.consulta-text-card');
+            console.log('text:', text);
+
+            if (!text) return;
+
+            container.classList.toggle('expanded');
+            const isExpanded = container.classList.contains('expanded');
+
+            if (isExpanded) {
+                text.style.whiteSpace = 'normal';
+                text.style.maxHeight = text.scrollHeight + 'px';
+            } else {
+                text.style.maxHeight = text.scrollHeight + 'px';
+                requestAnimationFrame(() => {
+                    text.style.maxHeight = '40px';
+                });
+                setTimeout(() => {
+                    text.style.whiteSpace = 'nowrap';
+                }, 300);
+            }
+        });
+    </script>
+
+    <!--Descargar tabla en Excel-->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script>
+        document.getElementById("btnExcel")
+            .addEventListener("click", exportarExcel);
+
+        function exportarExcel() {
+
+            const tablaOriginal = document.querySelector(".table");
+            const tablaClon = tablaOriginal.cloneNode(true);
+
+            // Se eliminan los controles visuales
+            tablaClon.querySelectorAll("input, select, button, img")
+                .forEach(el => el.remove());
+
+            // Columnas ocultas
+            const columnasOcultas = [];
+
+            document.querySelectorAll("thead th[data-column]").forEach(th => {
+                if (th.style.display === "none") {
+                    columnasOcultas.push(th.dataset.column);
+                }
+            });
+
+            // Se eliminan esas columnas ocultas
+            columnasOcultas.forEach(columna => {
+                tablaClon.querySelectorAll(`[data-column="${columna}"]`)
+                    .forEach(el => el.remove());
+            });
+
+            tablaClon.querySelectorAll("a").forEach(a => {
+                a.replaceWith(a.textContent);
+            });
+
+            const workbook = XLSX.utils.table_to_book(tablaClon, {
+                sheet: "Casos"
+            });
+
+            XLSX.writeFile(workbook, "Casos_Postventa.xlsx");
+        }
+    </script>
+
+    <!--Imprimir tabla-->
+    <script>
+        document.getElementById("btnImprimir").addEventListener("click", function () {
+            imprimirTabla();
+        });
+
+        function imprimirTabla() {
+
+            const tabla = document.querySelector(".table");
+
+            if (!tabla) {
+                mostrarToastError("No se encontró la tabla para imprimir.");
+                return;
+            }
+
+            window.print();
+        } 
+
+        function mostrarToastError(mensaje) {
+
+            const toastBody = document.getElementById("toastMensaje");
+            toastBody.textContent = mensaje;
+
+            const toast = new bootstrap.Toast(
+                document.getElementById("liveToastError")
+            );
+
+            toast.show();
+        }
+    </script>
+
+    <!--Toast-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastError" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header" style="background-color:#e10905; color:white;">
+                <strong class="me-auto">Error</strong>
+            </div>
+            <div class="toast-body" id="toastMensaje">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
