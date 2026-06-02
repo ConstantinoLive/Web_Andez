@@ -1076,7 +1076,6 @@ th.active-filter select {
         margin: 10mm;
     }
 
-    /* ocultar lo innecesario */
     .header,
     .titulo_seccion,
     .top-bar,
@@ -1101,7 +1100,6 @@ th.active-filter select {
         zoom: 0.75 !important;
     }
 
-    /* contenedores SIN scroll */
     .table-wrapper,
     .table-container {
         overflow: visible !important;
@@ -1112,7 +1110,6 @@ th.active-filter select {
         box-shadow: none !important;
     }
 
-    /* tabla completa */
     .table {
         position: static !important;
         width: max-content !important;
@@ -1122,7 +1119,6 @@ th.active-filter select {
         box-shadow: none !important;
     }
 
-    /* headers */
     .table thead th {
         position: static !important; 
         top: auto !important;
@@ -1146,7 +1142,6 @@ th.active-filter select {
         word-break: break-word !important;
     }
 
-    /* eliminar filtros visuales */
     .filtro,
     .sort-btn,
     thead input,
